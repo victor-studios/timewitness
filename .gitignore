@@ -2,6 +2,6 @@ node_modules/
 *.py
 extracted.json
 new_trans.json
-*.js
-!js/
-!index.html
+/append_lang.js
+/parse_html.js
+/translate_all.js
