@@ -1,0 +1,7 @@
+node_modules/
+*.py
+extracted.json
+new_trans.json
+*.js
+!js/
+!index.html

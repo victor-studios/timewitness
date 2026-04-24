@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeWitness | Digital Time Capsule for Future Letters, Memories, and Promises</title>
+<meta name="description" content="Write to your future self, preserve family memories, seal promises, and reopen them years later. TimeWitness is a permanence-focused digital time capsule app.">
+<meta name="keywords" content="digital time capsule, future letter app, write to future self, family archive app, memory preservation, TimeWitness, 时间证明">
+<meta property="og:title" content="TimeWitness — Let Time Witness What Matters">
+<meta property="og:description" content="A digital time capsule for future letters, family memories, relationship promises, and long-term commitments.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- Skip Link -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="site-header" id="site-header">
+<div class="container header-inner">
+  <a href="#" class="header-brand">
+    <svg class="header-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="16" stroke="#0070cc" stroke-width="1.2" opacity="0.3"/>
+      <path d="M18 6 L18 18 L26 22" stroke="#0070cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="10" y="12" width="16" height="12" rx="2" stroke="#0070cc" stroke-width="1.2" fill="none"/>
+      <path d="M10 14 L18 20 L26 14" stroke="#0070cc" stroke-width="1.2" fill="none"/>
+      <path d="M16 30 L18 32 L20 30" stroke="#1eaedb" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <div class="header-brand-text">TimeWitness</div>
+      <div class="header-brand-cn">时间证明</div>
+    </div>
+  </a>
+  <nav class="header-nav" id="main-nav" aria-label="Main navigation">
+    <a href="#how" data-i18n="nav.how">How It Works</a>
+    <a href="#features" data-i18n="nav.features">Features</a>
+    <a href="#usecases" data-i18n="nav.usecases">Use Cases</a>
+    <a href="#permanence" data-i18n="nav.permanence">Permanence</a>
+    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+  </nav>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN / 中文</button>
+    <a href="#waitlist" class="btn btn--primary btn--sm" data-i18n="cta.waitlist">Join Waitlist</a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+</header>
+
+<main id="main">
+
+<!-- ═══════════ SECTION 1: HERO ═══════════ -->
+<section class="section section--dark hero" id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="container grid grid--hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Digital Time Capsule for Life, Love, Family, and Promises</p>
+      <h1 class="reveal reveal-delay-1" data-i18n="hero.h1">Let Time Witness What Matters.</h1>
+      <p class="hero-cn reveal reveal-delay-2">让时间见证重要的一切</p>
+      <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">TimeWitness helps you write to your future self, preserve family memories, seal relationship promises, and verify long-term commitments — then reopen them years later with timed delivery, identity recovery, and permanence-focused storage.</p>
+      <p class="hero-supporting reveal reveal-delay-3" data-i18n="hero.supporting">Write today. Meet yourself, your memories, and your promises in the future.</p>
+      <div class="btn-group reveal reveal-delay-3">
+        <a href="#waitlist" class="btn btn--primary btn--lg" data-i18n="cta.waitlist">Join Waitlist</a>
+        <a href="#how" class="btn btn--secondary btn--lg" data-i18n="cta.how">See How It Works</a>
+      </div>
+      <div class="badges-row reveal reveal-delay-4">
+        <span class="badge">10–100 Year Capsules</span>
+        <span class="badge">WeChat + Email Delivery</span>
+        <span class="badge">Identity Recovery</span>
+        <span class="badge">Long-Term Preservation</span>
+      </div>
+      <p class="hero-micro reveal reveal-delay-5" data-i18n="hero.micro">No spam. Early access, launch updates, and your first future-letter template.</p>
+    </div>
+    <div class="hero-visual reveal reveal--scale reveal-delay-2">
+      <div class="hero-visual__capsule hero-capsule-anim">
+        <div class="hero-rings">
+          <div class="hero-ring hero-ring--1"><span class="hero-ring__label" style="top:0;right:0">10Y</span></div>
+          <div class="hero-ring hero-ring--2"><span class="hero-ring__label" style="top:0;left:0">30Y</span></div>
+          <div class="hero-ring hero-ring--3"><span class="hero-ring__label" style="bottom:0;right:0">100Y</span></div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-mockup__notch"></div>
+          <div class="phone-mockup__screen">
+            <div class="phone-mockup__header"><div class="phone-mockup__title">Write to Future Me</div></div>
+            <div class="phone-mockup__field"><span class="phone-mockup__field-label">Opening Date</span><span class="phone-mockup__field-value">January 1, 2045</span></div>
+            <div class="phone-mockup__field"><span class="phone-mockup__field-label">Capsule Type</span><span class="phone-mockup__field-value">Private Letter</span></div>
+            <div class="phone-mockup__field"><span class="phone-mockup__field-label">Delivery</span><span class="phone-mockup__field-value">Email + App + WeChat</span></div>
+            <div class="phone-mockup__btn">Seal Until the Future</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 2: ORIGIN STORY ═══════════ -->
+<section class="section section--light" id="origin">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <p class="eyebrow">From a fragile mailbox to a permanent digital promise</p>
+    <h2 data-i18n="origin.h2">Thirty years ago, people trusted a warehouse of letters. Today, we can build something stronger.</h2>
+    <p>Decades ago, people wrote letters to themselves or to society and placed them in physical mailboxes to be mailed 10, 20, 30, or even 50 years later. Many never arrived because addresses changed, phone numbers disappeared, and the original system depended on one person and one place.</p>
+    <p>TimeWitness brings that romantic idea into the digital age: a global time-capsule app designed for long-term storage, multi-channel delivery, identity-based account recovery, and decentralized continuity.</p>
+  </div>
+  <div class="origin-visual reveal">
+    <div class="origin-side origin-side--old">
+      <h4>Then</h4>
+      <p>Physical letters, lost addresses, fragile storage</p>
+    </div>
+    <div class="origin-arrow">→</div>
+    <div class="origin-side origin-side--new">
+      <h4>Now</h4>
+      <p>Digital capsules, identity recovery, redundant backup, future delivery</p>
+    </div>
+  </div>
+  <div class="text-center reveal" style="margin-top:var(--gap-xl)">
+    <a href="#how" class="btn btn--light">See what a modern time capsule can do</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 3: WHAT IS TIMEWITNESS ═══════════ -->
+<section class="section section--dark" id="what">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <p class="eyebrow">The platform</p>
+    <h2 data-i18n="what.h2">Not just a letter app. A long-term memory infrastructure.</h2>
+    <p>TimeWitness lets people seal meaningful content today and reopen it when time gives it new meaning. It serves individuals, relationships, families, organizations, and society.</p>
+  </div>
+  <div class="grid grid--4 reveal">
+    <div class="card card--dark reveal reveal-delay-1">
+      <div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+      <h3 class="card__title">Preserve the Self</h3>
+      <p class="card__text">Write your dreams, fears, goals, predictions, and reflections. Years later, rediscover the person you used to be.</p>
+    </div>
+    <div class="card card--dark reveal reveal-delay-2">
+      <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+      <h3 class="card__title">Preserve Relationships</h3>
+      <p class="card__text">Couples, friends, classmates, mentors, and teams can create shared capsules and reopen them together.</p>
+    </div>
+    <div class="card card--dark reveal reveal-delay-3">
+      <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+      <h3 class="card__title">Preserve Family Memory</h3>
+      <p class="card__text">Build a digital family archive with photos, stories, oral history, milestones, family mottos, and messages across generations.</p>
+    </div>
+    <div class="card card--dark reveal reveal-delay-4">
+      <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg></div>
+      <h3 class="card__title">Preserve Commitments</h3>
+      <p class="card__text">Seal important promises, contracts, signing moments, public statements, and goals for future verification and review.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 4: SELF-ARCHAEOLOGY ═══════════ -->
+<section class="section section--dark" id="archaeology">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <p class="eyebrow">The signature experience</p>
+    <h2 data-i18n="arch.h2">Self-archaeology: one day, you will meet who you used to be.</h2>
+    <p>Most apps help you capture the present. TimeWitness helps you compare the present with the future. A letter written at 18, opened at 30. A dream written before a career begins, reopened after it succeeds or changes. A prediction about society, reopened when history has answered.</p>
+    <p>Opening a TimeWitness capsule should feel like excavating a former version of yourself — your dreams, your judgment, your courage, your mistakes, and your growth.</p>
+  </div>
+  <div class="quote-card reveal">
+    <p class="quote-card__text">"Years later, it is not just an old message. It is a past version of you."</p>
+  </div>
+  <div class="text-center reveal" style="margin-top:var(--gap-xl)">
+    <a href="#waitlist" class="btn btn--primary" data-i18n="btn.first_letter">Write your first future letter</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 5: HOW IT WORKS ═══════════ -->
+<section class="section section--light" id="how">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <div class="gold-line"></div>
+    <h2 data-i18n="how.h2">How TimeWitness works</h2>
+  </div>
+  <div class="steps-timeline">
+    <div class="step-item reveal reveal-delay-1"><div class="step-dot"></div><p class="step-num">Step 1</p><h3 class="step-title">Create your account</h3><p class="step-text">Sign up with phone, email, WeChat, Apple ID, or Google. Verification-code login can automatically create an account.</p></div>
+    <div class="step-item reveal reveal-delay-2"><div class="step-dot"></div><p class="step-num">Step 2</p><h3 class="step-title">Write or upload</h3><p class="step-text">Use the in-app editor with elegant paper and font templates, or upload photos of handwritten letters. Add photos, audio, video, and documents.</p></div>
+    <div class="step-item reveal reveal-delay-3"><div class="step-dot"></div><p class="step-num">Step 3</p><h3 class="step-title">Choose the future</h3><p class="step-text">Set an opening date: 10, 20, 30, 50, or 100 years. Create multiple capsules, each with its own timeline.</p></div>
+    <div class="step-item reveal reveal-delay-4"><div class="step-dot"></div><p class="step-num">Step 4</p><h3 class="step-title">Seal and protect</h3><p class="step-text">Capsules are stored securely. Users may optionally bind identity information for future account recovery.</p></div>
+    <div class="step-item reveal reveal-delay-5"><div class="step-dot"></div><p class="step-num">Step 5</p><h3 class="step-title">Deliver on time</h3><p class="step-text">When the time arrives, TimeWitness sends reminders through WeChat, email, app notifications, and future channels.</p></div>
+    <div class="step-item reveal reveal-delay-6"><div class="step-dot"></div><p class="step-num">Step 6</p><h3 class="step-title">Open, reflect, renew</h3><p class="step-text">Mark goals as achieved or not, add reflections, and create the next future capsule.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 6: CORE FEATURES ═══════════ -->
+<section class="section section--dark" id="features">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <div class="gold-line"></div>
+    <h2 data-i18n="features.h2">Everything worth remembering can become a time capsule.</h2>
+  </div>
+  <div class="features-grid">
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" stroke="currentColor" fill="none" stroke-width="1.5" rx="2"/><path d="M4 8h16M8 4v16" stroke="currentColor" stroke-width="1.5"/></svg></div><h3 class="card__title">Future Letters</h3><p class="card__text">Write to your future self, your child, your partner, your family, your team, or future society. Capture dreams, decisions, predictions, and promises.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3 class="card__title">Multiple Time Horizons</h3><p class="card__text">Set capsules for 10, 20, 30, 50, or 100 years — or create custom milestones for weddings, graduations, and life goals.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 9l10 6 10-6-10-6z" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M2 17l10 6 10-6M2 13l10 6 10-6" stroke="currentColor" stroke-width="1.5"/></svg></div><h3 class="card__title">Beautiful Writing Experience</h3><p class="card__text">Use elegant digital paper, typography templates, and letter styles. Plain paper is free; premium stationery available as upgrade.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17 3a2.83 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><h3 class="card__title">Handwritten Uploads</h3><p class="card__text">Take a photo of a handwritten letter and preserve the emotional texture of real ink and paper.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5"/></svg></div><h3 class="card__title">Multimedia Capsules</h3><p class="card__text">Upload photos, videos, audio, contract scans, signing photos, wedding footage, family portraits, certificates, and more.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><h3 class="card__title">Shared Authorization</h3><p class="card__text">Grant access to selected people. Permissions include view-only, collaborative notes, joint opening, and automatic sharing.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 class="card__title">On-Time Delivery</h3><p class="card__text">China users receive WeChat pushes. Global users receive email reminders and full HTML letter content. Read opened capsules in the app.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><h3 class="card__title">Account Recovery</h3><p class="card__text">Even if you change phone numbers, emails, or social accounts, optional identity verification can help recover access years later.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><h3 class="card__title">Outcome Evaluation</h3><p class="card__text">After opening, mark goals as achieved, partially achieved, or not achieved, then add reflections and ratings.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5"/></svg></div><h3 class="card__title">Family Archive</h3><p class="card__text">Store family gatherings, elders' oral histories, ancestral photos, family trees, anniversaries, and migration stories.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M8 7h8M8 11h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3 class="card__title">Organization Memory</h3><p class="card__text">Companies and teams preserve signing moments, contracts, team visions, project goals, and financing milestones.</p></div>
+    <div class="card card--dark reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M12 2v4m0 12v4m-10-10h4m12 0h4m-3.5-6.5l-2.8 2.8m-7.4 7.4l-2.8 2.8m0-13l2.8 2.8m7.4 7.4l2.8 2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3 class="card__title">Social Predictions</h3><p class="card__text">Write predictions about society, economy, culture, and technology, creating a future archive of ordinary people's thoughts.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 7: USE CASES ═══════════ -->
+<section class="section section--light" id="usecases">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <div class="gold-line"></div>
+    <h2 data-i18n="usecases.h2">Made for the moments that deserve to survive time.</h2>
+  </div>
+  <div class="usecases-grid">
+    <div class="card card--light reveal"><h3 class="card__title">Write to your future self</h3><p class="card__text">Record childhood dreams, career goals, wealth goals, study plans, life wishes, and stage-by-stage reflections.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Messages children can open when they grow</h3><p class="card__text">Parents can leave letters, photos, and blessings at birth, school entry, adulthood, and other milestones.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Reopen your vows years later</h3><p class="card__text">Couples can upload vows, photos, and wedding footage, then reopen them after 7, 10, 20, or more years.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Love promises with a future date</h3><p class="card__text">Partners preserve anniversary memories, long-distance promises, proposal moments, and shared goals.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Promises between friends</h3><p class="card__text">Friends seal graduation words, startup vows, shared dreams, and brotherhood commitments for future review.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Ten-year reunion, remembered</h3><p class="card__text">Classes, clubs, and alumni groups upload photos, messages, and future goals with collective reminders.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">A family archive that outlives devices</h3><p class="card__text">Move family memory beyond one person's phone and create a shared digital heritage across generations.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Record growth and inheritance</h3><p class="card__text">Teachers, mentors, and students preserve learning goals, comments, and blessings for future reopening.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Seal the moment of commitment</h3><p class="card__text">Teams preserve contracts, signing photos, meeting videos, original goals, and future evaluation checkpoints.</p></div>
+    <div class="card card--light reveal"><h3 class="card__title">Let ordinary people leave records</h3><p class="card__text">Document what you believed, feared, expected, and predicted about the world.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 8: RELATIONSHIP ARCHAEOLOGY ═══════════ -->
+<section class="section section--deep" id="relationships">
+<div class="container">
+  <div class="section-header section-header--center reveal" style="max-width:700px">
+    <div class="gold-line"></div>
+    <h2 data-i18n="rel.h2">Relationship archaeology: remember what you promised together.</h2>
+    <p>TimeWitness is not only about the individual. Couples, families, friends, classmates, teams, and partners can preserve shared memories and shared commitments. Years later, they can reopen the same capsule together and ask: What did we promise? What changed? What survived? What should we begin again?</p>
+  </div>
+  <div class="mini-cards flex--center reveal">
+    <span class="mini-card">Two-person shared capsules</span>
+    <span class="mini-card">Multi-person permission control</span>
+    <span class="mini-card">Joint opening</span>
+    <span class="mini-card">Shared reflections</span>
+    <span class="mini-card">Renewed promises</span>
+  </div>
+  <div class="text-center reveal" style="margin-top:var(--gap-xl)">
+    <a href="#waitlist" class="btn btn--primary" data-i18n="btn.create_shared">Create a shared capsule</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 9: PERMANENCE & TRUST ═══════════ -->
+<section class="section section--dark" id="permanence">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <p class="eyebrow">Designed for decades</p>
+    <h2 data-i18n="perm.h2">The promise is not only to store. The promise is to deliver.</h2>
+    <p>Time capsules only matter if they can survive time. TimeWitness is designed around long-term resilience: redundant servers, backup nodes, encrypted export, blockchain timestamping, open-source core modules, and community-governed continuity planning.</p>
+  </div>
+  <div class="trust-grid">
+    <div class="card card--dark reveal"><h3 class="card__title">Primary + Backup Nodes</h3><p class="card__text">User data is written to a primary node and synchronized to independent backup nodes across different cloud providers and regions.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">3-2-1 Backup Principle</h3><p class="card__text">Three copies, two types of storage media, and one offline cold backup help reduce the risk of permanent data loss.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">Blockchain Timestamping</h3><p class="card__text">Capsule metadata such as recipient, delivery time, and content hash can be anchored to a public chain for long-term verification.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">Open-Source Core</h3><p class="card__text">Core modules such as storage, scheduled delivery, and verification can be open-sourced after platform stabilization.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">DAO / Foundation Continuity</h3><p class="card__text">A non-profit foundation or DAO structure can help maintain backup nodes and continuity if the original company cannot operate.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">Annual Integrity Drills</h3><p class="card__text">Old capsules can be sampled annually to verify readability, recoverability, and delivery logic.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">User-Owned Export</h3><p class="card__text">Users can export their encrypted letters and archives for personal storage.</p></div>
+    <div class="card card--dark reveal"><h3 class="card__title">Digital Will</h3><p class="card__text">Users may designate heirs or trusted contacts for long-term digital inheritance.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 10: SECURITY ═══════════ -->
+<section class="section section--light" id="security">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <div class="gold-line"></div>
+    <h2 data-i18n="security.h2">Your memories are personal. Your protection should be serious.</h2>
+    <p>TimeWitness is built for emotional trust and technical trust. The platform protects private letters, family memories, identity recovery information, and shared permissions with careful security design.</p>
+  </div>
+  <div class="security-grid">
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><div><h3 class="card__title">Optional identity protection</h3><p class="card__text">Users may voluntarily bind a national ID number or upload an ID photo for future account recovery. Never required for basic use.</p></div></div>
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><div><h3 class="card__title">Encrypted storage</h3><p class="card__text">Sensitive recovery information is stored with strong encryption and isolated from ordinary user content.</p></div></div>
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><h3 class="card__title">Hash-first decentralized records</h3><p class="card__text">Decentralized nodes store hashes or verification metadata only, never plaintext identity information.</p></div></div>
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M19 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><h3 class="card__title">Permission control</h3><p class="card__text">Users choose who can view, jointly open, annotate, or receive a capsule.</p></div></div>
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 11-12.73 0" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><h3 class="card__title">No ID collection on marketing site</h3><p class="card__text">The website waitlist never asks for ID documents. Identity binding belongs inside the secure app flow only.</p></div></div>
+    <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div><div><h3 class="card__title">Transparent privacy promise</h3><p class="card__text">Clear links to Privacy Policy, Terms, Data Export, and Security Overview.</p></div></div>
+  </div>
+  <div class="text-center reveal" style="margin-top:var(--gap-xl)">
+    <a href="#" class="btn btn--light" data-i18n="btn.security">Read the Security Overview</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SECTION 11: PRICING ═══════════ -->
+<section class="section section--light" id="pricing">
+<div class="container">
+  <div class="section-header section-header--center reveal">
+    <p class="eyebrow">Simple enough for everyone</p>
+    <h2 data-i18n="pricing.h2">Long-term memory should be affordable.</h2>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card card--light" style="border:1px solid var(--card-light-border)">
+      <div class="pricing-card__badge">Best value</div>
+      <h3>Annual</h3>
+      <div class="pricing-card__price">¥12<span style="font-size:0.5em;opacity:0.7">/year</span></div>
+      <p class="pricing-card__period">About US $1.70 / year</p>
+      <ul class="pricing-card__features">
+        <li>First month free</li>
+        <li>Unlimited letters during subscription</li>
+        <li>Store multiple capsules</li>
+        <li>Set different opening dates</li>
+        <li>Delivery continues after subscription ends</li>
+        <li>App, WeChat, and email delivery</li>
+      </ul>
+      <a href="#waitlist" class="btn btn--primary" style="width:100%">Start Free Month</a>
+    </div>
+    <div class="pricing-card card--light" style="border:1px solid var(--card-light-border)">
+      <h3>Monthly</h3>
+      <div class="pricing-card__price">¥2<span style="font-size:0.5em;opacity:0.7">/month</span></div>
+      <p class="pricing-card__period">Flexible short-term option</p>
+      <ul class="pricing-card__features">
+        <li>Month-to-month access</li>
+        <li>Same core writing and storage features</li>
+        <li>Higher price to encourage annual</li>
+        <li>Cancel anytime</li>
+      </ul>
+      <a href="#waitlist" class="btn btn--light" style="width:100%">Choose Monthly</a>
+    </div>
+    <div class="pricing-card card--light" style="border:1px solid var(--card-light-border)">
+      <h3>Memory Add-ons</h3>
+      <div class="pricing-card__price" style="font-size:1.75rem">Optional</div>
+      <p class="pricing-card__period">Premium enhancements</p>
+      <ul class="pricing-card__features">
+        <li>Premium digital letter paper: ¥1/page</li>
+        <li>Physical keepsake cards</li>
+        <li>Printed letters and elegant envelopes</li>
+        <li>On-chain sealing</li>
+        <li>Decentralized storage options</li>
+        <li>Enterprise packages</li>
+      </ul>
+      <a href="#waitlist" class="btn btn--light" style="width:100%">Explore Add-ons</a>
+    </div>
+  </div>
+  <div class="text-center reveal" style="margin-top:var(--gap-lg)">
+    <p class="microcopy" style="color:var(--text-dark-muted)">Payment methods</p>
+    <div class="payment-chips" style="margin-top:var(--gap-sm)">
+      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)">WeChat Pay</span>
+      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)">Alipay</span>
+      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)">Apple Pay</span>

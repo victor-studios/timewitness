@@ -1,0 +1,621 @@
+/* ============================================
+   TimeWitness Components — PlayStation Design System
+   ============================================ */
+
+/* ── Buttons — PlayStation Pill System ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: var(--text-btn);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-button);
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background var(--duration-fast) ease,
+              color var(--duration-fast) ease,
+              border-color var(--duration-fast) ease,
+              box-shadow var(--duration-fast) ease,
+              transform var(--duration-fast) ease;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.25;
+  outline: none;
+}
+
+/* Primary — PlayStation Blue Pill */
+.btn--primary {
+  background: var(--ps-blue);
+  color: var(--inverse-white);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Signature hover: cyan fill + white border + blue ring + scale 1.2× */
+.btn--primary:hover {
+  background: var(--ps-cyan);
+  color: var(--inverse-white);
+  border-color: var(--inverse-white);
+  box-shadow: 0 0 0 2px var(--ps-blue);
+  transform: scale(1.2);
+}
+
+.btn--primary:active {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+.btn--primary:focus-visible {
+  box-shadow: 0 0 0 2px var(--ps-blue);
+}
+
+/* Secondary — White fill on dark surfaces */
+.btn--secondary {
+  background: var(--inverse-white);
+  color: var(--ps-blue);
+  border: 2px solid var(--console-black);
+}
+
+.btn--secondary:hover {
+  background: var(--ps-cyan);
+  color: var(--inverse-white);
+  border-color: var(--inverse-white);
+  box-shadow: 0 0 0 2px var(--ps-blue);
+  transform: scale(1.2);
+}
+
+.btn--secondary:active {
+  opacity: 0.6;
+}
+
+/* Light variant — ghost on light surfaces */
+.btn--light {
+  background: transparent;
+  color: var(--deep-charcoal);
+  border: 1px solid var(--mute-gray);
+}
+
+.btn--light:hover {
+  background: var(--ps-cyan);
+  color: var(--inverse-white);
+  border-color: var(--inverse-white);
+  box-shadow: 0 0 0 2px var(--ps-blue);
+  transform: scale(1.2);
+}
+
+.btn--light:active {
+  color: var(--ps-blue);
+  opacity: 0.6;
+}
+
+/* Commerce Orange — Buy / Subscribe */
+.btn--commerce {
+  background: var(--commerce-orange);
+  color: var(--inverse-white);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-button-bold);
+}
+
+.btn--commerce:hover {
+  background: var(--ps-cyan);
+  color: var(--inverse-white);
+  border-color: var(--inverse-white);
+  box-shadow: 0 0 0 2px var(--ps-blue);
+  transform: scale(1.2);
+}
+
+.btn--commerce:active {
+  background: var(--commerce-orange-active);
+}
+
+/* Size variants */
+.btn--sm {
+  padding: 8px 16px;
+  font-size: var(--text-btn-compact);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-compact-btn);
+}
+
+.btn--lg {
+  padding: 16px 28px;
+  font-size: var(--text-btn);
+}
+
+.btn-group {
+  display: flex;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .btn { width: 100%; justify-content: center; }
+  .btn-group { flex-direction: column; }
+}
+
+/* ── Eyebrow — No ALL-CAPS, sentence case ── */
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-display);
+  color: var(--body-gray);
+  margin-bottom: var(--gap-md);
+}
+
+.section--light .eyebrow,
+.section--parchment .eyebrow {
+  color: var(--body-gray);
+}
+
+/* Dark surface eyebrow */
+.section--dark .eyebrow,
+.section--darker .eyebrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Cards — PlayStation restrained ── */
+.card {
+  padding: var(--gap-lg);
+  border-radius: var(--radius-24);
+  transition: transform var(--duration-normal) ease,
+              box-shadow var(--duration-normal) ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Dark card */
+.card--dark {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+}
+
+.card--dark:hover {
+  background: var(--card-dark-hover-bg);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Light card */
+.card--light {
+  background: var(--card-light-bg);
+  border: 1px solid var(--card-light-border);
+  box-shadow: var(--shadow-feather);
+}
+
+.card--light:hover {
+  box-shadow: var(--shadow-tile);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--gap-md);
+  color: var(--ps-blue);
+}
+
+.card__icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.card__title {
+  font-size: var(--text-h4);
+  font-weight: var(--fw-display);
+  margin-bottom: var(--gap-sm);
+}
+
+.card__text {
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  opacity: 0.85;
+}
+
+.section--light .card__text,
+.section--parchment .card__text {
+  color: var(--body-gray);
+}
+
+/* ── Badges — PlayStation white pills ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-pill);
+  background: rgba(0, 112, 204, 0.1);
+  color: var(--dark-surface-link);
+  border: 1px solid rgba(0, 112, 204, 0.2);
+}
+
+.section--light .badge {
+  background: var(--inverse-white);
+  color: var(--display-ink);
+  border-color: var(--divider-tint);
+}
+
+.badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+}
+
+/* ── Accordion (FAQ) ── */
+.accordion-item {
+  border-bottom: 1px solid var(--card-dark-border);
+}
+
+.section--light .accordion-item {
+  border-bottom-color: var(--divider-tint);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: var(--fw-display);
+  color: inherit;
+  text-align: left;
+  transition: color var(--duration-fast);
+}
+
+.accordion-trigger:hover {
+  color: var(--ps-blue);
+}
+
+.accordion-trigger::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: var(--fw-display);
+  color: var(--ps-blue);
+  transition: transform var(--duration-normal) ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.accordion-item.is-open .accordion-trigger::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-slow) var(--ease-out);
+}
+
+.accordion-item.is-open .accordion-content {
+  max-height: 500px;
+}
+
+.accordion-body {
+  padding-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+}
+
+.section--light .accordion-body {
+  color: var(--body-gray);
+}
+
+/* ── Forms — PlayStation restrained inputs ── */
+.form-group {
+  margin-bottom: var(--gap-md);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section--light .form-label {
+  color: var(--body-gray);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--inverse-white);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-3);
+  transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+  outline: none;
+}
+
+/* Light surface inputs */
+.section--light .form-input,
+.section--light .form-select,
+.section--light .form-textarea {
+  background: var(--inverse-white);
+  border: 1px solid var(--mute-gray);
+  color: var(--deep-charcoal);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--ps-blue);
+  box-shadow: 0 0 0 2px var(--ps-blue);
+}
+
+.form-input::placeholder {
+  color: var(--placeholder-ink);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236b6b6b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-select option {
+  background: var(--console-black);
+  color: var(--inverse-white);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--ps-blue);
+  flex-shrink: 0;
+}
+
+.form-helper {
+  font-size: var(--text-micro);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.375rem;
+}
+
+.form-error {
+  font-size: var(--text-micro);
+  color: var(--warning-red);
+  margin-top: 0.375rem;
+}
+
+/* ── Pricing Cards ── */
+.pricing-card {
+  padding: var(--gap-lg);
+  border-radius: var(--radius-24);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+}
+
+.pricing-card--featured {
+  border: 2px solid var(--ps-blue);
+  box-shadow: var(--shadow-elevated);
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.375rem 1.25rem;
+  font-size: var(--text-micro);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-compact-btn);
+  background: var(--ps-blue);
+  color: var(--inverse-white);
+  border-radius: var(--radius-pill);
+}
+
+.pricing-card__price {
+  font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+  font-weight: var(--fw-display);
+  font-family: var(--font-heading);
+  color: var(--ps-blue);
+  margin: var(--gap-md) 0 0.25rem;
+}
+
+.pricing-card__period {
+  font-size: var(--text-small);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--gap-md);
+}
+
+.pricing-card__features {
+  text-align: left;
+  margin-bottom: var(--gap-lg);
+}
+
+.pricing-card__features li {
+  padding: 0.5rem 0;
+  font-size: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-card__features li::before {
+  content: '✓';
+  color: var(--ps-blue);
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+}
+
+/* ── Quote Card ── */
+.quote-card {
+  padding: var(--gap-xl);
+  border-radius: var(--radius-24);
+  background: var(--card-dark-bg);
+  border: 1px solid var(--card-dark-border);
+  text-align: center;
+  position: relative;
+}
+
+/* ── Slider Components ── */
+.slider-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: var(--gap-md);
+  margin-top: var(--gap-lg);
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track {
+  display: flex;
+  gap: var(--gap-lg);
+  width: max-content;
+  padding: 0 var(--container-px);
+}
+
+.slider-card {
+  width: 340px;
+  min-height: 440px;
+  border-radius: var(--radius-24);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-normal) ease;
+}
+
+.slider-card:hover {
+  transform: translateY(-8px);
+}
+
+.slider-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.slider-card__content {
+  padding: var(--gap-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-card__title {
+  font-size: var(--text-h4);
+  font-weight: var(--fw-display);
+  margin-bottom: var(--gap-xs);
+}
+
+.slider-card__text {
+  font-size: var(--text-body);
+  color: var(--body-gray);
+  line-height: var(--lh-body);
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-size: 5rem;
+  font-family: var(--font-heading);
+  color: var(--ps-blue);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.quote-card__text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: var(--fw-display);
+  line-height: 1.5;
+  color: var(--inverse-white);
+}
+
+/* ── Payment Chips ── */
+.payment-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  justify-content: center;
+}
+
+.payment-chip {
+  padding: 0.5rem 1rem;
+  font-size: var(--text-micro);
+  border-radius: var(--radius-pill);
+  background: var(--card-dark-bg);
+  border: 1px solid var(--card-dark-border);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Microcopy ── */
+.microcopy {
+  font-size: var(--text-small);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--gap-md);
+}
+
+.section--light .microcopy {
+  color: var(--body-gray);
+}
+
+/* ── Divider — PlayStation Blue line ── */
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: var(--ps-blue);
+  margin-bottom: var(--gap-md);
+}
+
+.section-header--center .gold-line {
+  margin-left: auto;
+  margin-right: auto;
+}

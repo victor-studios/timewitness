@@ -1,0 +1,111 @@
+/* ============================================
+   TimeWitness Animations — PlayStation Design System
+   ============================================ */
+
+/* ── Scroll Reveal Base ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--duration-reveal) var(--ease-out),
+              transform var(--duration-reveal) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left {
+  transform: translateX(-40px) translateY(0);
+}
+
+.reveal--left.is-visible {
+  transform: translateX(0);
+}
+
+.reveal--right {
+  transform: translateX(40px) translateY(0);
+}
+
+.reveal--right.is-visible {
+  transform: translateX(0);
+}
+
+.reveal--scale {
+  transform: scale(0.92);
+}
+
+.reveal--scale.is-visible {
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+.reveal-delay-5 { transition-delay: 500ms; }
+.reveal-delay-6 { transition-delay: 600ms; }
+
+/* ── Keyframe Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(0.5deg); }
+  75% { transform: translateY(4px) rotate(-0.5deg); }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* ── Hero Phone Float ── */
+.hero-capsule-anim {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* ── Ring Pulse — subtle blue glow ── */
+.hero-ring {
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+.hero-ring--2 {
+  animation-delay: 1s;
+}
+
+.hero-ring--3 {
+  animation-delay: 2s;
+}
+
+/* ── Counter Animation ── */
+.counter-value {
+  transition: all 0.6s var(--ease-out);
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-capsule-anim,
+  .hero-ring {
+    animation: none;
+  }
+}

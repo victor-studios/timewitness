@@ -1,0 +1,130 @@
+/* ============================================
+   TimeWitness Layout System — PlayStation Design System
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+.container--narrow { max-width: 860px; }
+.container--wide { max-width: 1600px; }
+
+/* ── Sections — Three-surface channel ── */
+.section {
+  position: relative;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  overflow: hidden;
+}
+
+/* Console Black — hero and product zones */
+.section--dark {
+  background-color: var(--console-black);
+  background-image: var(--gradient-dark);
+  color: var(--inverse-white);
+}
+
+/* Shadow Black — deeper dark variant */
+.section--darker {
+  background: var(--gradient-dark);
+  color: var(--inverse-white);
+}
+
+/* Shadow Black solid */
+.section--deep {
+  background-color: var(--shadow-black);
+  background-image: var(--gradient-darker);
+  color: var(--inverse-white);
+}
+
+/* Paper White — editorial content panels */
+.section--light {
+  background: var(--gradient-light);
+  color: var(--display-ink);
+}
+
+/* Ice Mist — slightly lifted white panel */
+.section--parchment {
+  background-color: var(--ice-mist);
+  color: var(--display-ink);
+}
+
+/* PlayStation Blue — footer zone */
+.section--blue {
+  background-color: var(--ps-blue);
+  color: var(--inverse-white);
+}
+
+/* Warm gradient removed — replaced with dark gradient */
+.section--gradient-warm {
+  background: var(--gradient-dark);
+  color: var(--inverse-white);
+}
+
+/* Grain texture removed — no grain in PlayStation system */
+.section--grain::before {
+  display: none;
+}
+
+.section > .container { position: relative; z-index: var(--z-content); }
+
+/* ── Grid ── */
+.grid { display: grid; gap: var(--gap-lg); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--hero { grid-template-columns: 1fr 1fr; align-items: center; gap: var(--gap-xl); }
+
+/* ── Flex ── */
+.flex { display: flex; }
+.flex--center { display: flex; align-items: center; justify-content: center; }
+.flex--between { display: flex; align-items: center; justify-content: space-between; }
+.flex--col { display: flex; flex-direction: column; }
+.flex--wrap { display: flex; flex-wrap: wrap; }
+.flex--gap-sm { gap: var(--gap-sm); }
+.flex--gap-md { gap: var(--gap-md); }
+.flex--gap-lg { gap: var(--gap-lg); }
+
+.text-center { text-align: center; }
+
+/* ── Section Header ── */
+.section-header {
+  max-width: 780px;
+  margin-bottom: var(--gap-xl);
+}
+
+.section-header--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  margin-top: var(--gap-md);
+}
+
+.section--light .section-header p,
+.section--parchment .section-header p {
+  color: var(--body-gray);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid--hero { grid-template-columns: 1fr; text-align: center; }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid--2, .grid--3 { grid-template-columns: 1fr; }
+  .section-header { margin-bottom: var(--gap-lg); }
+}
+
+@media (max-width: 480px) {
+  .grid--4 { grid-template-columns: 1fr; }
+}
