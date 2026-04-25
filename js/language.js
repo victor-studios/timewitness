@@ -3,20 +3,33 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('lang-toggle');
-  if (!toggle) return;
+  const btnEn = document.getElementById('lang-en');
+  const btnCn = document.getElementById('lang-cn');
+  if (!btnEn || !btnCn) return;
 
   let currentLang = localStorage.getItem('tw-lang') || 'en';
   applyLang(currentLang);
 
-  toggle.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'zh' : 'en';
+  btnEn.addEventListener('click', () => {
+    currentLang = 'en';
+    localStorage.setItem('tw-lang', currentLang);
+    applyLang(currentLang);
+  });
+
+  btnCn.addEventListener('click', () => {
+    currentLang = 'zh';
     localStorage.setItem('tw-lang', currentLang);
     applyLang(currentLang);
   });
 
   function applyLang(lang) {
-    toggle.textContent = lang === 'en' ? 'EN / 中文' : '中文 / EN';
+    if (lang === 'en') {
+      btnEn.style.opacity = '1';
+      btnCn.style.opacity = '0.5';
+    } else {
+      btnEn.style.opacity = '0.5';
+      btnCn.style.opacity = '1';
+    }
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -238,8 +251,6 @@ const translations = {
   'auto.span_174': { en: 'WeChat Pay', zh: '微信支付' },
   'auto.span_175': { en: 'Alipay', zh: '支付宝' },
   'auto.span_176': { en: 'Apple Pay', zh: 'Apple Pay' },
-  'auto.full_3': { en: '80,000,000¥960,000,000         10%800,000,000¥9,600,000,000         20%1,600,000,000¥19,200,000,000                 <p class="microcopy" style="color:var(--body-gray)" data-i18n="auto.p_185">Scenario projections based on ¥12/year base subscription revenue only. Excludes premium stationery, physical keepsakes, on-chain sealing, enterprise editions, multimedia storage, and other value-added services.</p>', zh: '80,000,000¥960,000,000         10%800,000,000¥9,600,000,000         20%1,600,000,000¥19,200,000,000                 <p class="microcopy" style="color:var(--body-gray)" data-i18n="auto.p_185">Scenario projections based on ¥12/year base subscription revenue only. Excludes premium stationery, physical keepsakes, on-chain sealing, enterprise editions, multimedia storage, and other value-added services.</p>' },
-  'auto.p_185': { en: 'Scenario projections based on ¥12/year base subscription revenue only. Excludes premium stationery, physical keepsakes, on-chain sealing, enterprise editions, multimedia storage, and other value-added services.', zh: '场景预测仅基于12元/年的基础订阅收入。不包括高级信纸、实体纪念品、链上封存、企业版、多媒体存储及其他增值服务。' },
   'btn.investor': { en: 'Request Investor Brief', zh: '索取投资者简报' },
   'faq.h2': { en: 'Frequently Asked Questions', zh: '常见问题' },
   'auto.button_186': { en: 'What is TimeWitness?', zh: '什么是TimeWitness？' },

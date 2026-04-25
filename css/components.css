@@ -30,7 +30,7 @@
 /* Primary — PlayStation Blue Pill */
 .btn--primary {
   background: var(--ps-blue);
-  color: var(--inverse-white);
+  color: var(--console-black);
   border-color: transparent;
   box-shadow: none;
 }
@@ -38,8 +38,8 @@
 /* Signature hover: cyan fill + white border + blue ring + scale 1.2× */
 .btn--primary:hover {
   background: var(--ps-cyan);
-  color: var(--inverse-white);
-  border-color: var(--inverse-white);
+  color: var(--console-black);
+  border-color: var(--console-black);
   box-shadow: 0 0 0 2px var(--ps-blue);
   transform: scale(1.2);
 }
@@ -62,8 +62,8 @@
 
 .btn--secondary:hover {
   background: var(--ps-cyan);
-  color: var(--inverse-white);
-  border-color: var(--inverse-white);
+  color: var(--console-black);
+  border-color: var(--console-black);
   box-shadow: 0 0 0 2px var(--ps-blue);
   transform: scale(1.2);
 }
@@ -74,15 +74,15 @@
 
 /* Light variant — ghost on light surfaces */
 .btn--light {
-  background: transparent;
-  color: var(--deep-charcoal);
-  border: 1px solid var(--mute-gray);
+  background: var(--inverse-white);
+  color: var(--ps-blue);
+  border: 1px solid var(--ps-blue);
 }
 
 .btn--light:hover {
   background: var(--ps-cyan);
-  color: var(--inverse-white);
-  border-color: var(--inverse-white);
+  color: var(--console-black);
+  border-color: var(--console-black);
   box-shadow: 0 0 0 2px var(--ps-blue);
   transform: scale(1.2);
 }

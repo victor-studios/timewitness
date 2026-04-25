@@ -4,14 +4,14 @@
 
 :root {
   /* ── Primary (Brand Anchor) ── */
-  --ps-blue: #0070cc;
+  --ps-blue: #15dead; /* modern green */
   --console-black: #000000;
 
   /* ── Secondary & Accent ── */
-  --ps-cyan: #1eaedb;
-  --link-hover-blue: #1883fd;
-  --dark-link-blue: #0068bd;
-  --dark-surface-link: #53b1ff;
+  --ps-cyan: #00f0ff; /* futuristic cyan */
+  --link-hover-blue: #33ffcc;
+  --dark-link-blue: #00ffcc;
+  --dark-surface-link: #33ffcc;
 
   /* ── Surface & Background ── */
   --paper-white: #ffffff;
@@ -72,11 +72,11 @@
   --card-light-shadow: 0 5px 9px var(--shadow-wash-06);
 
   /* ── Typography ── */
-  --font-heading: 'Inter', 'Arial', 'Helvetica', sans-serif;
-  --font-body: 'Inter', 'Arial', 'Helvetica', sans-serif;
-  --font-quote: 'Inter', 'Arial', 'Helvetica', sans-serif;
-  --font-chinese-heading: 'Noto Serif SC', serif;
-  --font-chinese-body: 'Noto Sans SC', sans-serif;
+  --font-heading: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-body: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-quote: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-chinese-heading: 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-chinese-body: 'Songti SC', 'STSong', 'SimSun', serif;
 
   /* Typography Scale */
   --text-hero: clamp(2.25rem, 4.5vw, 3.375rem);     /* 54px max, SST 300 */

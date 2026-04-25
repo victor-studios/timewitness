@@ -703,12 +703,12 @@
   color: var(--ps-blue);
 }
 
-/* ── FOOTER — PlayStation Blue anchor ── */
+/* ── FOOTER — Light Mode ── */
 .site-footer {
-  background: var(--ps-blue);
-  color: var(--inverse-white);
+  background: var(--paper-white);
+  color: var(--display-ink);
   padding: var(--gap-xl) 0 var(--gap-lg);
-  border-top: none;
+  border-top: 1px solid var(--divider-tint);
 }
 
 .footer-grid {
@@ -722,13 +722,13 @@
   font-family: var(--font-heading);
   font-size: 1.125rem;
   font-weight: var(--fw-medium);
-  color: var(--inverse-white);
+  color: var(--display-ink);
   margin-bottom: 0.25rem;
 }
 
 .footer-tagline {
   font-size: var(--text-small);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--body-gray);
   font-style: italic;
   margin-top: 0.5rem;
 }
@@ -737,25 +737,25 @@
   font-size: var(--text-micro);
   font-weight: var(--fw-medium);
   letter-spacing: var(--ls-display);
-  color: var(--inverse-white);
+  color: var(--display-ink);
   margin-bottom: var(--gap-md);
 }
 
 .footer-col a {
   display: block;
   font-size: var(--text-small);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--body-gray);
   padding: 0.3rem 0;
   transition: color var(--duration-fast);
 }
 
 .footer-col a:hover {
-  color: var(--inverse-white);
+  color: var(--ps-blue);
 }
 
 .footer-bottom {
   padding-top: var(--gap-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--divider-tint);
   text-align: center;
   font-size: var(--text-small);
 }
@@ -769,6 +769,7 @@
   opacity: 0.7;
   max-width: 700px;
   margin: 0.5rem auto 0;
+  color: var(--body-gray);
 }
 
 @media (max-width: 768px) {

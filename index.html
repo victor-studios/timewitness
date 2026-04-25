@@ -23,13 +23,7 @@
 <header class="site-header" id="site-header">
 <div class="container header-inner">
   <a href="#" class="header-brand">
-    <svg class="header-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="18" cy="18" r="16" stroke="#0070cc" stroke-width="1.2" opacity="0.3"></circle>
-      <path d="M18 6 L18 18 L26 22" stroke="#0070cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      <rect x="10" y="12" width="16" height="12" rx="2" stroke="#0070cc" stroke-width="1.2" fill="none"></rect>
-      <path d="M10 14 L18 20 L26 14" stroke="#0070cc" stroke-width="1.2" fill="none"></path>
-      <path d="M16 30 L18 32 L20 30" stroke="#1eaedb" stroke-width="1.2" stroke-linecap="round"></path>
-    </svg>
+    <img src="assets/logo.png" alt="TimeWitness Logo" class="header-logo" style="height: 36px; width: auto; border-radius: 50%;">
     <div>
       <div class="header-brand-text" data-i18n="auto.div_3">TimeWitness</div>
       <div class="header-brand-cn" data-i18n="auto.div_4">时间证明</div>
@@ -44,7 +38,11 @@
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="header-right">
-    <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language" data-i18n="auto.button_5">EN / 中文</button>
+    <div class="lang-buttons" style="display: flex; gap: 0.25rem; align-items: center; margin-right: 1rem;">
+      <button class="lang-btn" id="lang-en" aria-label="English" style="background: none; border: none; color: var(--inverse-white); cursor: pointer; font-family: var(--font-heading); font-weight: bold; padding: 0.25rem 0.5rem; opacity: 1; font-size: 0.9rem;">EN</button>
+      <span style="color: rgba(255,255,255,0.3)">|</span>
+      <button class="lang-btn" id="lang-cn" aria-label="中文" style="background: none; border: none; color: var(--inverse-white); cursor: pointer; font-family: var(--font-chinese-heading); font-weight: bold; padding: 0.25rem 0.5rem; opacity: 0.5; font-size: 0.9rem;">中文</button>
+    </div>
     <a href="#waitlist" class="btn btn--primary btn--sm" data-i18n="cta.waitlist">Join Waitlist</a>
     <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -388,14 +386,7 @@
       <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_174">WeChat Pay</span>
       <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_175">Alipay</span>
       <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_176">Apple Pay</span>
-      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.�96,000,000</td></tr>
-        <tr><td>1%</td><td data-i18n=" auto.td_177"="" data-i18n="auto.full_3">80,000,000¥960,000,000
-        10%800,000,000¥9,600,000,000
-        20%1,600,000,000¥19,200,000,000
-      
-    
-    <p class="microcopy" style="color:var(--body-gray)" data-i18n="auto.p_185">Scenario projections based on ¥12/year base subscription revenue only. Excludes premium stationery, physical keepsakes, on-chain sealing, enterprise editions, multimedia storage, and other value-added services.</p>
-  </span></div>
+    </div>
   <div class="text-center reveal" style="margin-top:var(--gap-xl)">
     <a href="mailto:invest@timewitness.app" class="btn btn--primary" data-i18n="btn.investor">Request Investor Brief</a>
   </div>
