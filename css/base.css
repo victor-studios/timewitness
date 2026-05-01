@@ -1,9 +1,9 @@
 /* ============================================
-   TimeWitness Base Styles — PlayStation Design System
+   TimeWitness Base Styles — Ethereal Time-Capsule System
    ============================================ */
 
-/* ── Google Fonts — Inter as SST substitute ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+/* ── Google Fonts — Oxanium + DM Sans ── */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ── Modern Reset ── */
 *,
@@ -39,50 +39,53 @@ body {
   font-size: var(--text-body);
   line-height: var(--lh-body);
   font-weight: var(--fw-regular);
-  color: var(--inverse-white);
-  background-color: var(--console-black);
+  color: var(--display-ink);
+  background-color: var(--sky-lightest);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Scrollbar — PlayStation restrained ── */
+/* ── Scrollbar — Ethereal Blue ── */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--console-black);
+  background: var(--sky-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 112, 204, 0.3);
+  background: linear-gradient(180deg, var(--primary-glow), var(--primary));
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 112, 204, 0.5);
+  background: linear-gradient(180deg, var(--primary-light), var(--primary));
 }
 
 /* ── Typography ── */
-/* Display headlines: weight 300 — the quiet-authority voice */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--fw-display);
   line-height: var(--lh-h2);
   letter-spacing: var(--ls-display);
+  color: var(--display-ink);
 }
 
 h1 {
   font-size: var(--text-hero);
   line-height: var(--lh-hero);
   letter-spacing: var(--ls-hero);
+  font-weight: var(--fw-bold);
 }
 
 h2 {
   font-size: var(--text-h2);
+  font-weight: var(--fw-semibold);
 }
 
 h3 {
   font-size: var(--text-h3);
   line-height: var(--lh-h3);
+  font-weight: var(--fw-semibold);
 }
 
 p {
@@ -93,18 +96,18 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* ── Links — PlayStation Blue at rest ── */
+/* ── Links ── */
 a {
-  color: var(--dark-link-blue);
+  color: var(--primary);
   text-decoration: none;
   transition: color var(--duration-fast) ease;
 }
 
 a:hover {
-  color: var(--link-hover-blue);
+  color: var(--primary-light);
 }
 
-/* ── Focus States — 2px PlayStation Blue ring ── */
+/* ── Focus States ── */
 :focus-visible {
   outline: none;
   box-shadow: var(--shadow-focus);
@@ -128,7 +131,7 @@ ul, ol {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: var(--ps-blue);
+  background: var(--gradient-btn);
   color: var(--inverse-white);
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-pill);
@@ -144,7 +147,7 @@ ul, ol {
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(0, 112, 204, 0.2);
+  background: rgba(10, 132, 196, 0.15);
   color: var(--display-ink);
 }
 

@@ -1,137 +1,170 @@
 /* ============================================
-   TimeWitness Design Tokens — PlayStation Design System
+   TimeWitness Design Tokens — Ethereal Time-Capsule System
    ============================================ */
 
 :root {
   /* ── Primary (Brand Anchor) ── */
-  --ps-blue: #15dead; /* modern green */
-  --console-black: #000000;
+  --primary: #0A84C4;
+  --primary-light: #3AAEE0;
+  --primary-glow: #7EC8E3;
+  --primary-soft: #B8DFF5;
+  --primary-ultra-soft: #E1F2FB;
 
-  /* ── Secondary & Accent ── */
-  --ps-cyan: #00f0ff; /* futuristic cyan */
-  --link-hover-blue: #33ffcc;
-  --dark-link-blue: #00ffcc;
-  --dark-surface-link: #33ffcc;
+  /* ── Deep / Dark Accent ── */
+  --deep-blue: #0B2447;
+  --deep-navy: #091B36;
+  --deep-midnight: #061325;
+
+  /* ── Sky & Background Gradients ── */
+  --sky-lightest: #F0F7FC;
+  --sky-light: #E8F4FD;
+  --sky-mid: #D1ECFA;
+  --sky-deep: #B8DFF5;
+  --sky-vivid: #A0D4F1;
 
   /* ── Surface & Background ── */
   --paper-white: #ffffff;
-  --ice-mist: #f5f7fa;
-  --divider-tint: #f3f3f3;
-  --masthead-black: #000000;
-  --shadow-black: #121314;
-  --filter-mist: rgba(245, 247, 250, 0.3);
+  --ice-mist: #F5F9FC;
+  --divider-tint: #E2EDF5;
+  --surface-warm: #FAFCFE;
 
   /* ── Neutrals & Text ── */
-  --display-ink: #000000;
-  --deep-charcoal: #1f1f1f;
-  --body-gray: #6b6b6b;
-  --mute-gray: #cccccc;
-  --placeholder-ink: rgba(0, 0, 0, 0.6);
+  --display-ink: #0B2447;
+  --deep-charcoal: #1A3A5C;
+  --body-gray: #4A6B8A;
+  --mute-gray: #8EAEC4;
+  --placeholder-ink: rgba(11, 36, 71, 0.4);
   --inverse-white: #ffffff;
 
-  /* ── Semantic & Commerce ── */
-  --commerce-orange: #d53b00;
-  --commerce-orange-active: #aa2f00;
-  --warning-red: #c81b3a;
+  /* ── Semantic ── */
+  --commerce-orange: #E8663D;
+  --commerce-orange-active: #D0522B;
+  --warning-red: #E04058;
+  --success-green: #2ECC71;
 
   /* ── Shadow Washes ── */
-  --shadow-wash-80: rgba(0, 0, 0, 0.8);
-  --shadow-wash-16: rgba(0, 0, 0, 0.16);
-  --shadow-wash-08: rgba(0, 0, 0, 0.08);
-  --shadow-wash-06: rgba(0, 0, 0, 0.06);
+  --shadow-wash-80: rgba(11, 36, 71, 0.12);
+  --shadow-wash-16: rgba(11, 36, 71, 0.08);
+  --shadow-wash-08: rgba(11, 36, 71, 0.05);
+  --shadow-wash-06: rgba(11, 36, 71, 0.03);
 
-  /* ── Gradients & Glassmorphism ── */
-  --gradient-light: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
-  --gradient-dark: radial-gradient(circle at top right, rgba(0, 112, 204, 0.15) 0%, #000000 60%);
-  --gradient-darker: radial-gradient(circle at bottom left, rgba(30, 174, 219, 0.1) 0%, #121314 70%);
-  
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: blur(16px);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  /* ── Gradients ── */
+  --gradient-sky: linear-gradient(180deg, #E8F4FD 0%, #F0F7FC 50%, #FAFCFE 100%);
+  --gradient-hero: linear-gradient(135deg, #0B2447 0%, #0E3C6E 30%, #1565A0 60%, #3AAEE0 100%);
+  --gradient-deep: linear-gradient(180deg, #0B2447 0%, #0E3060 50%, #0A84C4 100%);
+  --gradient-cosmic: radial-gradient(ellipse at 20% 50%, rgba(58, 174, 224, 0.15) 0%, transparent 50%),
+                     radial-gradient(ellipse at 80% 20%, rgba(126, 200, 227, 0.12) 0%, transparent 50%),
+                     radial-gradient(ellipse at 50% 80%, rgba(10, 132, 196, 0.08) 0%, transparent 50%),
+                     linear-gradient(180deg, #0B2447 0%, #091B36 100%);
+  --gradient-glass-light: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 100%);
+  --gradient-glass-dark: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  --gradient-cta: linear-gradient(135deg, #0B2447 0%, #0E3C6E 40%, #1565A0 100%);
+  --gradient-btn: linear-gradient(135deg, #0A84C4 0%, #3AAEE0 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #3AAEE0 0%, #7EC8E3 100%);
 
-  /* ── Legacy Aliases (for gradual migration) ── */
-  --gold: var(--ps-blue);
-  --gold-hover: var(--ps-cyan);
+  /* ── Glassmorphism ── */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-strong: rgba(255, 255, 255, 0.85);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.4);
+  --glass-bg-dark: rgba(255, 255, 255, 0.06);
+  --glass-bg-dark-strong: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-border-subtle: rgba(255, 255, 255, 0.25);
+  --glass-border-dark: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(20px);
+  --glass-blur-strong: blur(30px);
+  --glass-shadow: 0 8px 32px rgba(11, 36, 71, 0.08);
+  --glass-shadow-lg: 0 16px 48px rgba(11, 36, 71, 0.12);
+
+  /* ── Legacy Aliases ── */
+  --ps-blue: var(--primary);
+  --console-black: var(--deep-blue);
+  --gold: var(--primary);
+  --gold-hover: var(--primary-light);
   --text-light: var(--inverse-white);
-  --text-light-secondary: rgba(255, 255, 255, 0.7);
+  --text-light-secondary: rgba(255, 255, 255, 0.75);
   --text-dark: var(--display-ink);
   --text-dark-muted: var(--body-gray);
-  --bg-midnight: var(--console-black);
-  --bg-ink: var(--console-black);
-  --bg-deep-space: var(--shadow-black);
+  --bg-midnight: var(--deep-blue);
+  --bg-ink: var(--deep-navy);
+  --bg-deep-space: var(--deep-midnight);
   --bg-ivory: var(--paper-white);
   --bg-parchment: var(--ice-mist);
+  --dark-link-blue: var(--primary);
+  --dark-surface-link: var(--primary-light);
+  --link-hover-blue: var(--primary-light);
 
   /* ── Card Styles ── */
-  --card-dark-bg: rgba(255, 255, 255, 0.05);
-  --card-dark-border: rgba(255, 255, 255, 0.1);
-  --card-dark-hover-bg: rgba(255, 255, 255, 0.08);
-  --card-light-bg: var(--paper-white);
-  --card-light-border: var(--divider-tint);
-  --card-light-shadow: 0 5px 9px var(--shadow-wash-06);
+  --card-dark-bg: rgba(255, 255, 255, 0.06);
+  --card-dark-border: rgba(255, 255, 255, 0.12);
+  --card-dark-hover-bg: rgba(255, 255, 255, 0.1);
+  --card-light-bg: var(--glass-bg-strong);
+  --card-light-border: rgba(255, 255, 255, 0.5);
+  --card-light-shadow: 0 4px 24px rgba(11, 36, 71, 0.06);
 
   /* ── Typography ── */
-  --font-heading: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
-  --font-body: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
-  --font-quote: 'Times New Roman', 'Songti SC', 'STSong', 'SimSun', serif;
-  --font-chinese-heading: 'Songti SC', 'STSong', 'SimSun', serif;
-  --font-chinese-body: 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-heading: 'Oxanium', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-quote: 'Oxanium', 'DM Sans', sans-serif;
+  --font-chinese-heading: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-chinese-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
   /* Typography Scale */
-  --text-hero: clamp(2.25rem, 4.5vw, 3.375rem);     /* 54px max, SST 300 */
-  --text-hero-lg: clamp(1.75rem, 3.5vw, 2.75rem);    /* 44px max */
-  --text-h2: clamp(1.5rem, 2.5vw, 2.1875rem);        /* 35px max */
-  --text-h3: clamp(1.25rem, 1.8vw, 1.75rem);         /* 28px max */
-  --text-h4: clamp(1.125rem, 1.5vw, 1.375rem);       /* 22px max */
-  --text-body: clamp(0.9375rem, 1.1vw, 1.125rem);    /* 18px max */
-  --text-small: 0.875rem;                              /* 14px */
-  --text-micro: 0.75rem;                               /* 12px */
-  --text-btn: 1.125rem;                                /* 18px */
-  --text-btn-compact: 0.875rem;                        /* 14px */
-  --text-eyebrow: 0.875rem;
+  --text-hero: clamp(2.5rem, 5vw, 3.75rem);
+  --text-hero-lg: clamp(2rem, 4vw, 3rem);
+  --text-h2: clamp(1.625rem, 2.8vw, 2.375rem);
+  --text-h3: clamp(1.25rem, 1.8vw, 1.75rem);
+  --text-h4: clamp(1.125rem, 1.5vw, 1.375rem);
+  --text-body: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  --text-small: 0.875rem;
+  --text-micro: 0.75rem;
+  --text-btn: 1rem;
+  --text-btn-compact: 0.875rem;
+  --text-eyebrow: 0.8125rem;
 
-  --lh-hero: 1.25;
-  --lh-h2: 1.25;
-  --lh-h3: 1.25;
-  --lh-body: 1.50;
+  --lh-hero: 1.12;
+  --lh-h2: 1.22;
+  --lh-h3: 1.28;
+  --lh-body: 1.7;
 
-  /* Font Weights — PlayStation gradient: 300 display → 400 body → 500 caption → 700 button */
-  --fw-display: 300;
+  /* Font Weights */
+  --fw-display: 700;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-extra-bold: 800;
 
   /* Letter Spacing */
-  --ls-hero: -0.1px;
-  --ls-display: 0.1px;
-  --ls-button: 0.4px;
-  --ls-button-bold: 0.45px;
-  --ls-compact-btn: 0.324px;
+  --ls-hero: 0.02em;
+  --ls-display: 0.01em;
+  --ls-button: 0.01em;
+  --ls-button-bold: 0.02em;
+  --ls-compact-btn: 0.01em;
+  --ls-eyebrow: 0.08em;
 
   /* ── Spacing (8px base unit) ── */
-  --section-py: clamp(3rem, 7vw, 6rem);
-  --section-py-sm: clamp(2rem, 4vw, 4rem);
+  --section-py: clamp(4rem, 8vw, 7rem);
+  --section-py-sm: clamp(2.5rem, 5vw, 4.5rem);
   --container-max: 1280px;
   --container-wide: 1920px;
-  --container-px: clamp(1rem, 4vw, 4rem);
-  --gap-xs: 0.5rem;    /* 8px */
-  --gap-sm: 0.75rem;   /* 12px */
-  --gap-md: 1.5rem;    /* 24px */
-  --gap-lg: 2.5rem;    /* 40px */
-  --gap-xl: 4rem;      /* 64px */
-  --gap-xxl: 6rem;     /* 96px */
+  --container-px: clamp(1.25rem, 4vw, 4rem);
+  --gap-xs: 0.5rem;
+  --gap-sm: 0.75rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 4rem;
+  --gap-xxl: 6rem;
 
-  /* ── Border Radius — 11-value system ── */
+  /* ── Border Radius ── */
   --radius-2: 2px;
-  --radius-3: 3px;
-  --radius-6: 6px;
-  --radius-12: 12px;
-  --radius-13: 13px;
-  --radius-19: 19px;
-  --radius-20: 20px;
-  --radius-24: 24px;
+  --radius-3: 4px;
+  --radius-6: 8px;
+  --radius-12: 16px;
+  --radius-13: 16px;
+  --radius-19: 20px;
+  --radius-20: 24px;
+  --radius-24: 28px;
   --radius-36: 36px;
   --radius-48: 48px;
   --radius-pill: 999px;
@@ -140,15 +173,18 @@
   --radius-sm: var(--radius-12);
   --radius-md: var(--radius-19);
   --radius-lg: var(--radius-24);
-  --radius-xl: var(--radius-24);
+  --radius-xl: var(--radius-36);
 
-  /* ── Shadows — Four-tier system ── */
-  --shadow-feather: 0 5px 9px var(--shadow-wash-06);
-  --shadow-tile: 0 5px 9px var(--shadow-wash-08);
-  --shadow-elevated: 0 5px 9px var(--shadow-wash-16);
-  --shadow-hero: 0 5px 9px var(--shadow-wash-80);
-  --shadow-focus: 0 0 0 2px var(--ps-blue);
-  --shadow-hover-ring: 0 0 0 2px var(--console-black);
+  /* ── Shadows ── */
+  --shadow-feather: 0 2px 12px rgba(11, 36, 71, 0.04);
+  --shadow-tile: 0 4px 20px rgba(11, 36, 71, 0.06);
+  --shadow-elevated: 0 8px 32px rgba(11, 36, 71, 0.1);
+  --shadow-hero: 0 20px 60px rgba(11, 36, 71, 0.15);
+  --shadow-focus: 0 0 0 3px rgba(10, 132, 196, 0.3);
+  --shadow-hover-ring: 0 0 0 3px rgba(10, 132, 196, 0.15);
+  --shadow-glow: 0 0 30px rgba(10, 132, 196, 0.2);
+  --shadow-glow-strong: 0 0 50px rgba(10, 132, 196, 0.3);
+  --shadow-card-hover: 0 12px 40px rgba(11, 36, 71, 0.12);
 
   /* Legacy shadow aliases */
   --shadow-sm: var(--shadow-feather);
@@ -159,16 +195,17 @@
 
   /* ── Blur ── */
   --blur-sm: 8px;
-  --blur-md: 12px;
-  --blur-lg: 24px;
+  --blur-md: 16px;
+  --blur-lg: 30px;
 
   /* ── Transitions ── */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --duration-fast: 180ms;
-  --duration-normal: 300ms;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
   --duration-slow: 600ms;
-  --duration-reveal: 800ms;
+  --duration-reveal: 900ms;
 
   /* ── Z-Index ── */
   --z-particles: 0;

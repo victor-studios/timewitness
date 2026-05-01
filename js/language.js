@@ -62,7 +62,7 @@ const translations = {
   'hero.eyebrow': { en: 'Digital Time Capsule for Life, Love, Family, and Promises', zh: '为生活、爱情、家庭和承诺打造的数字时间胶囊' },
   'hero.h1': { en: 'Let Time Witness What Matters.', zh: '让时间见证重要的一切。' },
   'auto.p_6': { en: '让时间见证重要的一切', zh: '让时间见证重要的一切' },
-  'hero.sub': { en: 'TimeWitness helps you write to your future self, preserve family memories, seal relationship promises, and verify long-term commitments — then reopen them years later with timed delivery, identity recovery, and permanence-focused storage.', zh: 'TimeWitness帮助您给未来的自己写信，保存家庭记忆，封存感情承诺，验证长期承诺——然后在数年后通过定时投递、身份找回和永久存储重新打开。' },
+  'hero.sub': { en: 'Write to your future self, preserve family memories, and seal promises. Reopen them years later with timed delivery and permanence-focused storage.', zh: '给未来的自己写信，保存家庭记忆，封存承诺。在数年后通过定时投递和永久存储重新打开。' },
   'hero.supporting': { en: 'Write today. Meet yourself, your memories, and your promises in the future.', zh: '今天写下。在未来遇见自己、记忆和承诺。' },
   'cta.how': { en: 'See How It Works', zh: '了解使用方式' },
   'auto.span_7': { en: '10–100 Year Capsules', zh: '10-100年时间胶囊' },

@@ -39,11 +39,11 @@
   </nav>
   <div class="header-right">
     <div class="lang-buttons" style="display: flex; gap: 0.25rem; align-items: center; margin-right: 1rem;">
-      <button class="lang-btn" id="lang-en" aria-label="English" style="background: none; border: none; color: var(--inverse-white); cursor: pointer; font-family: var(--font-heading); font-weight: bold; padding: 0.25rem 0.5rem; opacity: 1; font-size: 0.9rem;">EN</button>
-      <span style="color: rgba(255,255,255,0.3)">|</span>
-      <button class="lang-btn" id="lang-cn" aria-label="中文" style="background: none; border: none; color: var(--inverse-white); cursor: pointer; font-family: var(--font-chinese-heading); font-weight: bold; padding: 0.25rem 0.5rem; opacity: 0.5; font-size: 0.9rem;">中文</button>
+      <button class="lang-btn" id="lang-en" aria-label="English" style="background: none; border: none; color: inherit; cursor: pointer; font-family: var(--font-heading); font-weight: 600; padding: 0.25rem 0.5rem; opacity: 1; font-size: 0.9rem;">EN</button>
+      <span style="color: rgba(11,36,71,0.2)">|</span>
+      <button class="lang-btn" id="lang-cn" aria-label="中文" style="background: none; border: none; color: inherit; cursor: pointer; font-family: var(--font-chinese-heading); font-weight: 600; padding: 0.25rem 0.5rem; opacity: 0.5; font-size: 0.9rem;">中文</button>
     </div>
-    <a href="#waitlist" class="btn btn--primary btn--sm" data-i18n="cta.waitlist">Join Waitlist</a>
+    <a href="#download" class="btn btn--primary btn--sm" data-i18n="btn.download_app">Download App</a>
     <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -55,16 +55,21 @@
 
 <!-- ═══════════ SECTION 1: HERO ═══════════ -->
 <section class="section section--dark hero" id="hero">
+  <!-- Looping Video Background -->
+  <!-- Note: Please place your 4-5s looping mp4 video at assets/hero_video.mp4 -->
+  <video autoplay loop muted playsinline class="hero-video-bg" poster="assets/hero_bg.png">
+    <source src="assets/hero_video.mp4" type="video/mp4">
+  </video>
   <canvas id="particles-canvas"></canvas>
   <div class="container grid grid--hero">
     <div class="hero-content">
       <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Digital Time Capsule for Life, Love, Family, and Promises</p>
       <h1 class="reveal reveal-delay-1" data-i18n="hero.h1">Let Time Witness What Matters.</h1>
 
-      <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">TimeWitness helps you write to your future self, preserve family memories, seal relationship promises, and verify long-term commitments — then reopen them years later with timed delivery, identity recovery, and permanence-focused storage.</p>
+      <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Write to your future self, preserve family memories, and seal promises. Reopen them years later with timed delivery and permanence-focused storage.</p>
       <p class="hero-supporting reveal reveal-delay-3" data-i18n="hero.supporting">Write today. Meet yourself, your memories, and your promises in the future.</p>
       <div class="btn-group reveal reveal-delay-3">
-        <a href="#waitlist" class="btn btn--primary btn--lg" data-i18n="cta.waitlist">Join Waitlist</a>
+        <a href="#download" class="btn btn--primary btn--lg" data-i18n="btn.download_app">Download App</a>
         <a href="#how" class="btn btn--secondary btn--lg" data-i18n="cta.how">See How It Works</a>
       </div>
       <div class="badges-row reveal reveal-delay-4">
@@ -135,50 +140,42 @@
     <div class="slider-container" id="what-slider-container">
       <div class="slider-track" id="what-slider-track">
         <div class="slider-card reveal-delay-1">
-          <div class="slider-card__image" style="background: linear-gradient(135deg, rgba(0, 112, 204, 0.2), #000); display:flex; align-items:center; justify-content:center;">
-            <svg style="width: 64px; height: 64px; color: var(--ps-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path></svg>
-          </div>
+          <img class="slider-card__image" src="assets/card_self.png" alt="Preserve the Self">
           <div class="slider-card__content">
             <div class="card__icon" style="margin-bottom:0.5rem"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path></svg></div>
-            <h3 class="slider-card__title" style="color: var(--inverse-white)" data-i18n="auto.h3_32">Preserve the Self</h3>
-            <p class="slider-card__text" style="color: rgba(255,255,255,0.7)" data-i18n="auto.p_33">Write your dreams, fears, goals, predictions, and reflections. Years later, rediscover the person you used to be.</p>
+            <h3 class="slider-card__title" data-i18n="auto.h3_32">Preserve the Self</h3>
+            <p class="slider-card__text" data-i18n="auto.p_33">Write your dreams, fears, goals, predictions, and reflections. Years later, rediscover the person you used to be.</p>
           </div>
         </div>
         <div class="slider-card reveal-delay-2">
-          <div class="slider-card__image" style="background: linear-gradient(135deg, rgba(0, 112, 204, 0.2), #000); display:flex; align-items:center; justify-content:center;">
-            <svg style="width: 64px; height: 64px; color: var(--ps-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-          </div>
+          <img class="slider-card__image" src="assets/card_relationships.png" alt="Preserve Relationships">
           <div class="slider-card__content">
             <div class="card__icon" style="margin-bottom:0.5rem"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg></div>
-            <h3 class="slider-card__title" style="color: var(--inverse-white)" data-i18n="auto.h3_34">Preserve Relationships</h3>
-            <p class="slider-card__text" style="color: rgba(255,255,255,0.7)" data-i18n="auto.p_35">Couples, friends, classmates, mentors, and teams can create shared capsules and reopen them together.</p>
+            <h3 class="slider-card__title" data-i18n="auto.h3_34">Preserve Relationships</h3>
+            <p class="slider-card__text" data-i18n="auto.p_35">Couples, friends, classmates, mentors, and teams can create shared capsules and reopen them together.</p>
           </div>
         </div>
         <div class="slider-card reveal-delay-3">
-          <div class="slider-card__image" style="background: linear-gradient(135deg, rgba(0, 112, 204, 0.2), #000); display:flex; align-items:center; justify-content:center;">
-            <svg style="width: 64px; height: 64px; color: var(--ps-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><polyline points="9,22 9,12 15,12 15,22"></polyline></svg>
-          </div>
+          <img class="slider-card__image" src="assets/card_family.png" alt="Preserve Family Memory">
           <div class="slider-card__content">
             <div class="card__icon" style="margin-bottom:0.5rem"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><polyline points="9,22 9,12 15,12 15,22"></polyline></svg></div>
-            <h3 class="slider-card__title" style="color: var(--inverse-white)" data-i18n="auto.h3_36">Preserve Family Memory</h3>
-            <p class="slider-card__text" style="color: rgba(255,255,255,0.7)" data-i18n="auto.p_37">Build a digital family archive with photos, stories, oral history, milestones, family mottos, and messages across generations.</p>
+            <h3 class="slider-card__title" data-i18n="auto.h3_36">Preserve Family Memory</h3>
+            <p class="slider-card__text" data-i18n="auto.p_37">Build a digital family archive with photos, stories, oral history, milestones, family mottos, and messages across generations.</p>
           </div>
         </div>
         <div class="slider-card reveal-delay-4">
-          <div class="slider-card__image" style="background: linear-gradient(135deg, rgba(0, 112, 204, 0.2), #000); display:flex; align-items:center; justify-content:center;">
-            <svg style="width: 64px; height: 64px; color: var(--ps-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          </div>
+          <img class="slider-card__image" src="assets/card_commitments.png" alt="Preserve Commitments">
           <div class="slider-card__content">
             <div class="card__icon" style="margin-bottom:0.5rem"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"></path><rect x="3" y="3" width="18" height="18" rx="3"></rect></svg></div>
-            <h3 class="slider-card__title" style="color: var(--inverse-white)" data-i18n="auto.h3_38">Preserve Commitments</h3>
-            <p class="slider-card__text" style="color: rgba(255,255,255,0.7)" data-i18n="auto.p_39">Seal important promises, contracts, signing moments, public statements, and goals for future verification and review.</p>
+            <h3 class="slider-card__title" data-i18n="auto.h3_38">Preserve Commitments</h3>
+            <p class="slider-card__text" data-i18n="auto.p_39">Seal important promises, contracts, signing moments, public statements, and goals for future verification and review.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="slider-controls" style="display: flex; gap: 1rem; margin-top: 1.5rem; padding: 0 var(--container-px);">
-      <button class="slider-btn" onclick="document.getElementById('what-slider-container').scrollBy({left:-360, behavior:'smooth'})" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg></button>
-      <button class="slider-btn" onclick="document.getElementById('what-slider-container').scrollBy({left:360, behavior:'smooth'})" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg></button>
+      <button class="slider-btn" onclick="document.getElementById('what-slider-container').scrollBy({left:-360, behavior:'smooth'})" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(12px);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg></button>
+      <button class="slider-btn" onclick="document.getElementById('what-slider-container').scrollBy({left:360, behavior:'smooth'})" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(12px);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg></button>
     </div>
   </div>
 </div>
@@ -186,18 +183,23 @@
 
 <!-- ═══════════ SECTION 4: SELF-ARCHAEOLOGY ═══════════ -->
 <section class="section section--light" id="archaeology">
-<div class="container">
-  <div class="section-header section-header--center reveal">
-    <p class="eyebrow" data-i18n="auto.p_40">The signature experience</p>
-    <h2 data-i18n="arch.h2">Self-archaeology: one day, you will meet who you used to be.</h2>
-    <p data-i18n="auto.p_41">Most apps help you capture the present. TimeWitness helps you compare the present with the future. A letter written at 18, opened at 30. A dream written before a career begins, reopened after it succeeds or changes. A prediction about society, reopened when history has answered.</p>
-    <p data-i18n="auto.p_42">Opening a TimeWitness capsule should feel like excavating a former version of yourself — your dreams, your judgment, your courage, your mistakes, and your growth.</p>
+<div class="container grid grid--2" style="align-items: center;">
+  <div class="archaeology-content reveal">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="auto.p_40">The signature experience</p>
+      <h2 data-i18n="arch.h2">Self-archaeology: one day, you will meet who you used to be.</h2>
+      <p data-i18n="auto.p_41">Most apps capture the present, but TimeWitness lets you compare it with your future. Seal a letter or dream today, and reopen it years later.</p>
+      <p data-i18n="auto.p_42">Opening a capsule is like excavating a former version of yourself to rediscover your past courage, judgment, and growth.</p>
+    </div>
+    <div class="quote-card" style="margin-bottom: var(--gap-xl);">
+      <p class="quote-card__text" data-i18n="auto.p_43">"Years later, it is not just an old message. It is a past version of you."</p>
+    </div>
+    <div>
+      <a href="#download" class="btn btn--primary" data-i18n="btn.download_app">Download App</a>
+    </div>
   </div>
-  <div class="quote-card reveal">
-    <p class="quote-card__text" style="color: var(--display-ink)" data-i18n="auto.p_43">"Years later, it is not just an old message. It is a past version of you."</p>
-  </div>
-  <div class="text-center reveal" style="margin-top:var(--gap-xl)">
-    <a href="#waitlist" class="btn btn--primary" data-i18n="btn.first_letter">Write your first future letter</a>
+  <div class="archaeology-visual reveal reveal--scale">
+    <img src="assets/self_archaeology.png" alt="Self-archaeology" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-glass); border: 1px solid var(--glass-border);">
   </div>
 </div>
 </section>
@@ -267,7 +269,7 @@
 </section>
 
 <!-- ═══════════ SECTION 8: RELATIONSHIP ARCHAEOLOGY ═══════════ -->
-<section class="section section--deep" id="relationships">
+<section class="section section--dark" id="relationships">
 <div class="container">
   <div class="section-header section-header--center reveal" style="max-width:700px">
     <div class="gold-line"></div>
@@ -282,7 +284,7 @@
     <span class="mini-card" data-i18n="auto.span_111">Renewed promises</span>
   </div>
   <div class="text-center reveal" style="margin-top:var(--gap-xl)">
-    <a href="#waitlist" class="btn btn--primary" data-i18n="btn.create_shared">Create a shared capsule</a>
+    <a href="#download" class="btn btn--primary" data-i18n="btn.download_app">Download App</a>
   </div>
 </div>
 </section>
@@ -351,7 +353,7 @@
         <li data-i18n="auto.li_152">Delivery continues after subscription ends</li>
         <li data-i18n="auto.li_153">App, WeChat, and email delivery</li>
       </ul>
-      <a href="#waitlist" class="btn btn--primary" style="width:100%" data-i18n="auto.a_154">Start Free Month</a>
+      <a href="#download" class="btn btn--primary" style="width:100%" data-i18n="btn.download_app">Download App</a>
     </div>
     <div class="pricing-card card--light" style="border:1px solid var(--card-light-border)">
       <h3 data-i18n="auto.h3_155">Monthly</h3>
@@ -363,7 +365,7 @@
         <li data-i18n="auto.li_160">Higher price to encourage annual</li>
         <li data-i18n="auto.li_161">Cancel anytime</li>
       </ul>
-      <a href="#waitlist" class="btn btn--light" style="width:100%" data-i18n="auto.a_162">Choose Monthly</a>
+      <a href="#download" class="btn btn--light" style="width:100%" data-i18n="btn.download_app">Download App</a>
     </div>
     <div class="pricing-card card--light" style="border:1px solid var(--card-light-border)">
       <h3 data-i18n="auto.h3_163">Memory Add-ons</h3>
@@ -377,15 +379,15 @@
         <li data-i18n="auto.li_170">Decentralized storage options</li>
         <li data-i18n="auto.li_171">Enterprise packages</li>
       </ul>
-      <a href="#waitlist" class="btn btn--light" style="width:100%" data-i18n="auto.a_172">Explore Add-ons</a>
+      <a href="#download" class="btn btn--light" style="width:100%" data-i18n="btn.download_app">Download App</a>
     </div>
   </div>
   <div class="text-center reveal" style="margin-top:var(--gap-lg)">
     <p class="microcopy" style="color:var(--text-dark-muted)" data-i18n="auto.p_173">Payment methods</p>
     <div class="payment-chips" style="margin-top:var(--gap-sm)">
-      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_174">WeChat Pay</span>
-      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_175">Alipay</span>
-      <span class="payment-chip" style="background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.1);color:var(--text-dark-muted)" data-i18n="auto.span_176">Apple Pay</span>
+      <span class="payment-chip" data-i18n="auto.span_174">WeChat Pay</span>
+      <span class="payment-chip" data-i18n="auto.span_175">Alipay</span>
+      <span class="payment-chip" data-i18n="auto.span_176">Apple Pay</span>
     </div>
   <div class="text-center reveal" style="margin-top:var(--gap-xl)">
     <a href="mailto:invest@timewitness.app" class="btn btn--primary" data-i18n="btn.investor">Request Investor Brief</a>
@@ -418,14 +420,34 @@
 </section>
 
 <!-- ═══════════ SECTION 17: FINAL CTA ═══════════ -->
-<section class="section section--darker" id="final-cta">
+<section class="section section--light" id="download">
 <div class="container final-cta">
   <h2 class="reveal" data-i18n="final.h2">Write today. Let time answer.</h2>
   <p class="reveal" data-i18n="final.sub">Start with one letter, one promise, one memory, or one dream. Your future self is waiting.</p>
-  <div class="btn-group reveal" style="justify-content:center">
-    <a href="#" class="btn btn--primary btn--lg" data-i18n="btn.create_letter">Create Your First Future Letter</a>
+  
+  <div class="download-cards reveal" style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+    <a href="#" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--deep-blue)">
+        <path d="M16.035 13.064c-.015-2.738 2.235-4.053 2.338-4.118-1.272-1.862-3.255-2.115-3.957-2.148-1.68-.17-3.284.992-4.148.992-.863 0-2.18-.962-3.568-.934-1.812.026-3.486 1.053-4.423 2.685-1.895 3.286-.484 8.136 1.36 10.803.904 1.306 1.968 2.766 3.376 2.713 1.353-.055 1.868-.876 3.414-.876 1.543 0 2.006.876 3.441.85 1.46-.028 2.378-1.326 3.275-2.637 1.037-1.516 1.463-2.986 1.485-3.063-.03-.014-2.868-1.096-2.893-4.267zM14.545 4.545c.748-.905 1.253-2.164 1.115-3.42-.107.017-.235.035-.373.035-1.353 0-2.85-.826-3.626-1.764-.678-.813-1.282-2.128-1.12-3.42 1.272.103 2.698.882 3.493 1.823.71.841 1.233 2.13 1.056 3.364l-.545.021z" transform="translate(1, 2)"/>
+      </svg>
+      <div>
+        <div style="font-size: 0.75rem; color: var(--body-gray);">Download on the</div>
+        <div style="font-weight: var(--fw-bold); font-size: 1.25rem; color: var(--deep-blue); margin-top: -0.1rem;">App Store</div>
+      </div>
+    </a>
+    
+    <a href="#" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--deep-blue)">
+        <path d="M17.523 15.341l2.454 4.249a.663.663 0 0 1-.24.904.664.664 0 0 1-.904-.239l-2.518-4.36A11.39 11.39 0 0 1 12 16.5a11.39 11.39 0 0 1-4.316-.605l-2.518 4.36a.664.664 0 0 1-.903.24.664.664 0 0 1-.241-.905l2.454-4.25A11.523 11.523 0 0 1 2 7.5v-1h20v1a11.523 11.523 0 0 1-4.477 7.841zM8 12.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+      </svg>
+      <div>
+        <div style="font-size: 0.75rem; color: var(--body-gray);">GET IT ON</div>
+        <div style="font-weight: var(--fw-bold); font-size: 1.25rem; color: var(--deep-blue); margin-top: -0.1rem;">Google Play</div>
+      </div>
+    </a>
   </div>
-  <p class="microcopy reveal" style="margin-top:var(--gap-md)" data-i18n="auto.p_210">First month free after launch. No ID upload required on the website.</p>
+
+  <p class="microcopy reveal" style="margin-top:var(--gap-xl)" data-i18n="auto.p_210">First month free after launch. No ID upload required on the website.</p>
 </div>
 </section>
 
