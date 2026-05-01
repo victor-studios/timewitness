@@ -163,12 +163,12 @@
   opacity: 0.9; /* Subtle blend with background color */
 }
 
-/* Light overlay for softer background */
+/* Dark overlay for contrast against video/background */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+  background: linear-gradient(135deg, rgba(11, 36, 71, 0.7) 0%, rgba(9, 27, 54, 0.4) 50%, rgba(11, 36, 71, 0.2) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -196,7 +196,7 @@
   font-weight: var(--fw-semibold);
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--primary-glow);
   margin-bottom: var(--gap-md);
 }
 
@@ -204,13 +204,14 @@
   margin-bottom: var(--gap-md);
   font-weight: var(--fw-extra-bold);
   letter-spacing: var(--ls-hero);
-  color: var(--deep-blue);
+  color: var(--inverse-white);
   line-height: 1.1;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .hero-sub {
   font-size: clamp(1rem, 1.3vw, 1.125rem);
-  color: var(--deep-charcoal);
+  color: rgba(255, 255, 255, 0.9);
   line-height: var(--lh-body);
   margin-bottom: var(--gap-sm);
   max-width: 540px;
@@ -218,7 +219,7 @@
 
 .hero-supporting {
   font-size: var(--text-small);
-  color: var(--primary);
+  color: var(--primary-glow);
   font-style: italic;
   margin-bottom: var(--gap-lg);
 }
@@ -227,15 +228,15 @@
 .hero .badges-row { margin-bottom: var(--gap-sm); }
 
 .hero .badge {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--deep-blue);
-  border-color: rgba(10, 132, 196, 0.15);
+  background: rgba(11, 36, 71, 0.5);
+  color: var(--inverse-white);
+  border-color: rgba(126, 200, 227, 0.2);
   backdrop-filter: blur(8px);
 }
 
 .hero-micro {
   font-size: var(--text-small);
-  color: var(--body-gray);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Hero visual */
