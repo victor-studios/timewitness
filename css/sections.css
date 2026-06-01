@@ -35,8 +35,9 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: var(--deep-blue);
+  color: var(--inverse-white);
   flex-shrink: 0;
+  transition: color var(--duration-normal) ease;
 }
 
 .is-scrolled .header-brand { color: var(--display-ink); }
@@ -66,7 +67,7 @@
 .header-nav a {
   font-size: var(--text-small);
   font-weight: var(--fw-medium);
-  color: var(--deep-charcoal);
+  color: rgba(255, 255, 255, 0.85);
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-pill);
   transition: all var(--duration-fast);
@@ -74,10 +75,10 @@
 }
 
 .is-scrolled .header-nav a { color: var(--body-gray); }
-.header-nav a:hover { color: var(--primary); background: rgba(10, 132, 196, 0.06); }
+.header-nav a:hover { color: var(--inverse-white); background: rgba(255, 255, 255, 0.1); }
 .is-scrolled .header-nav a:hover { color: var(--primary); background: var(--primary-ultra-soft); }
 
-.header-nav a.is-active { color: var(--primary); position: relative; }
+.header-nav a.is-active { color: var(--primary-glow); position: relative; }
 .is-scrolled .header-nav a.is-active { color: var(--primary); }
 
 .header-nav a.is-active::after {
@@ -98,8 +99,44 @@
   flex-shrink: 0;
 }
 
-.is-scrolled .lang-btn { color: var(--display-ink) !important; }
-.is-scrolled .lang-btn + span { color: rgba(11, 36, 71, 0.3) !important; }
+/* Language Switcher */
+.lang-buttons {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--inverse-white) !important;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  transition: all var(--duration-fast) ease;
+}
+
+.lang-btn:hover {
+  color: var(--inverse-white) !important;
+  opacity: 1 !important;
+}
+
+.lang-sep {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  transition: all var(--duration-normal) ease;
+}
+
+.is-scrolled .lang-btn {
+  color: var(--display-ink) !important;
+}
+
+.is-scrolled .lang-sep {
+  color: rgba(11, 36, 71, 0.3) !important;
+}
 
 .mobile-menu-btn {
   display: none;
@@ -107,7 +144,8 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: var(--deep-blue);
+  color: var(--inverse-white);
+  transition: color var(--duration-normal) ease;
 }
 .is-scrolled .mobile-menu-btn { color: var(--display-ink); }
 .mobile-menu-btn svg { width: 24px; height: 24px; }

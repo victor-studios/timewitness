@@ -773,3 +773,149 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ── Modal System ── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 12, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-normal) var(--ease-out), visibility var(--duration-normal) var(--ease-out);
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%) scale(0.95);
+  width: 90%;
+  max-width: 480px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--duration-normal) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal.is-active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 40px;
+  height: 40px;
+  background: var(--glass-bg-strong);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--inverse-white);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--duration-fast) var(--ease-out);
+  backdrop-filter: blur(12px);
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+  }
+}
+
+/* ── Filter System ── */
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--gap-lg);
+}
+
+.filter-btn {
+  background: var(--glass-bg-strong);
+  border: 1px solid rgba(10, 132, 196, 0.15);
+  color: var(--body-gray);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  backdrop-filter: blur(8px);
+}
+
+.section--dark .filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.filter-btn:hover {
+  background: var(--primary-ultra-soft);
+  color: var(--primary);
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.section--dark .filter-btn:hover {
+  background: rgba(10, 132, 196, 0.15);
+  color: var(--primary-glow);
+  border-color: rgba(10, 132, 196, 0.3);
+}
+
+.filter-btn.is-active {
+  background: var(--gradient-btn);
+  color: var(--inverse-white);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(10, 132, 196, 0.25);
+}
+
+.section--dark .filter-btn.is-active {
+  box-shadow: 0 4px 12px rgba(10, 132, 196, 0.15);
+}
+
+.filter-item {
+  transition: opacity var(--duration-normal) var(--ease-out), transform var(--duration-normal) var(--ease-out), filter var(--duration-normal) var(--ease-out);
+}
+
+.filter-item.is-hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  filter: blur(4px);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}

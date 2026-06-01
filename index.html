@@ -22,7 +22,7 @@
 <!-- ═══════════ HEADER ═══════════ -->
 <header class="site-header" id="site-header">
 <div class="container header-inner">
-  <a href="#" class="header-brand">
+  <a href="#hero" class="header-brand">
     <img src="assets/logo.png" alt="TimeWitness Logo" class="header-logo" style="height: 36px; width: auto; border-radius: 50%;">
     <div>
       <div class="header-brand-text" data-i18n="auto.div_3">TimeWitness</div>
@@ -38,10 +38,10 @@
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="header-right">
-    <div class="lang-buttons" style="display: flex; gap: 0.25rem; align-items: center; margin-right: 1rem;">
-      <button class="lang-btn" id="lang-en" aria-label="English" style="background: none; border: none; color: inherit; cursor: pointer; font-family: var(--font-heading); font-weight: 600; padding: 0.25rem 0.5rem; opacity: 1; font-size: 0.9rem;">EN</button>
-      <span style="color: rgba(11,36,71,0.2)">|</span>
-      <button class="lang-btn" id="lang-cn" aria-label="中文" style="background: none; border: none; color: inherit; cursor: pointer; font-family: var(--font-chinese-heading); font-weight: 600; padding: 0.25rem 0.5rem; opacity: 0.5; font-size: 0.9rem;">中文</button>
+    <div class="lang-buttons">
+      <button class="lang-btn" id="lang-en" aria-label="English">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" id="lang-cn" aria-label="中文">中文</button>
     </div>
     <a href="#download" class="btn btn--primary btn--sm" data-i18n="btn.download_app">Download App</a>
     <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
@@ -253,17 +253,24 @@
     <div class="gold-line"></div>
     <h2 data-i18n="usecases.h2">Made for the moments that deserve to survive time.</h2>
   </div>
+  <div class="filter-group text-center reveal" style="margin-bottom: var(--gap-lg); display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+    <button class="filter-btn is-active" data-filter="all" data-i18n="filter.all">All</button>
+    <button class="filter-btn" data-filter="personal" data-i18n="filter.personal">Personal</button>
+    <button class="filter-btn" data-filter="relationships" data-i18n="filter.relationships">Relationships</button>
+    <button class="filter-btn" data-filter="family" data-i18n="filter.family">Family</button>
+    <button class="filter-btn" data-filter="groups" data-i18n="filter.groups">Organizations & Groups</button>
+  </div>
   <div class="usecases-grid">
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><h3 class="card__title" data-i18n="auto.h3_86">Write to your future self</h3><p class="card__text" data-i18n="auto.p_87">Record childhood dreams, career goals, wealth goals, study plans, life wishes, and stage-by-stage reflections.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17 14V2"></path><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_88">Messages children can open when they grow</h3><p class="card__text" data-i18n="auto.p_89">Parents can leave letters, photos, and blessings at birth, school entry, adulthood, and other milestones.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_90">Reopen your vows years later</h3><p class="card__text" data-i18n="auto.p_91">Couples can upload vows, photos, and wedding footage, then reopen them after 7, 10, 20, or more years.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="card__title" data-i18n="auto.h3_92">Love promises with a future date</h3><p class="card__text" data-i18n="auto.p_93">Partners preserve anniversary memories, long-distance promises, proposal moments, and shared goals.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_94">Promises between friends</h3><p class="card__text" data-i18n="auto.p_95">Friends seal graduation words, startup vows, shared dreams, and brotherhood commitments for future review.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_96">Ten-year reunion, remembered</h3><p class="card__text" data-i18n="auto.p_97">Classes, clubs, and alumni groups upload photos, messages, and future goals with collective reminders.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_98">A family archive that outlives devices</h3><p class="card__text" data-i18n="auto.p_99">Move family memory beyond one person's phone and create a shared digital heritage across generations.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_100">Record growth and inheritance</h3><p class="card__text" data-i18n="auto.p_101">Teachers, mentors, and students preserve learning goals, comments, and blessings for future reopening.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_102">Seal the moment of commitment</h3><p class="card__text" data-i18n="auto.p_103">Teams preserve contracts, signing photos, meeting videos, original goals, and future evaluation checkpoints.</p></div>
-    <div class="card card--light reveal"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_104">Let ordinary people leave records</h3><p class="card__text" data-i18n="auto.p_105">Document what you believed, feared, expected, and predicted about the world.</p></div>
+    <div class="card card--light reveal filter-item" data-category="personal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><h3 class="card__title" data-i18n="auto.h3_86">Write to your future self</h3><p class="card__text" data-i18n="auto.p_87">Record childhood dreams, career goals, wealth goals, study plans, life wishes, and stage-by-stage reflections.</p></div>
+    <div class="card card--light reveal filter-item" data-category="family"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17 14V2"></path><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_88">Messages children can open when they grow</h3><p class="card__text" data-i18n="auto.p_89">Parents can leave letters, photos, and blessings at birth, school entry, adulthood, and other milestones.</p></div>
+    <div class="card card--light reveal filter-item" data-category="relationships"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_90">Reopen your vows years later</h3><p class="card__text" data-i18n="auto.p_91">Couples can upload vows, photos, and wedding footage, then reopen them after 7, 10, 20, or more years.</p></div>
+    <div class="card card--light reveal filter-item" data-category="relationships"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="card__title" data-i18n="auto.h3_92">Love promises with a future date</h3><p class="card__text" data-i18n="auto.p_93">Partners preserve anniversary memories, long-distance promises, proposal moments, and shared goals.</p></div>
+    <div class="card card--light reveal filter-item" data-category="relationships"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_94">Promises between friends</h3><p class="card__text" data-i18n="auto.p_95">Friends seal graduation words, startup vows, shared dreams, and brotherhood commitments for future review.</p></div>
+    <div class="card card--light reveal filter-item" data-category="groups"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_96">Ten-year reunion, remembered</h3><p class="card__text" data-i18n="auto.p_97">Classes, clubs, and alumni groups upload photos, messages, and future goals with collective reminders.</p></div>
+    <div class="card card--light reveal filter-item" data-category="family"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_98">A family archive that outlives devices</h3><p class="card__text" data-i18n="auto.p_99">Move family memory beyond one person's phone and create a shared digital heritage across generations.</p></div>
+    <div class="card card--light reveal filter-item" data-category="personal"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_100">Record growth and inheritance</h3><p class="card__text" data-i18n="auto.p_101">Teachers, mentors, and students preserve learning goals, comments, and blessings for future reopening.</p></div>
+    <div class="card card--light reveal filter-item" data-category="groups"><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_102">Seal the moment of commitment</h3><p class="card__text" data-i18n="auto.p_103">Teams preserve contracts, signing photos, meeting videos, original goals, and future evaluation checkpoints.</p></div>
+    <div class="card card--light reveal filter-item" data-category="personal"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div><h3 class="card__title" data-i18n="auto.h3_104">Let ordinary people leave records</h3><p class="card__text" data-i18n="auto.p_105">Document what you believed, feared, expected, and predicted about the world.</p></div>
   </div>
 </div>
 </section>
@@ -327,7 +334,7 @@
     <div class="security-point reveal"><div class="security-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" fill="none" stroke-width="1.5"></path><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="1.5"></circle></svg></div><div><h3 class="card__title" data-i18n="auto.h3_141">Transparent privacy promise</h3><p class="card__text" data-i18n="auto.p_142">Clear links to Privacy Policy, Terms, Data Export, and Security Overview.</p></div></div>
   </div>
   <div class="text-center reveal" style="margin-top:var(--gap-xl)">
-    <a href="#" class="btn btn--light" data-i18n="btn.security">Read the Security Overview</a>
+    <button class="btn btn--light" data-modal="coming-soon" data-i18n="btn.security">Read the Security Overview</button>
   </div>
 </div>
 </section>
@@ -426,7 +433,7 @@
   <p class="reveal" data-i18n="final.sub">Start with one letter, one promise, one memory, or one dream. Your future self is waiting.</p>
   
   <div class="download-cards reveal" style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
-    <a href="#" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
+    <a href="javascript:void(0)" data-modal="waitlist" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--deep-blue)">
         <path d="M16.035 13.064c-.015-2.738 2.235-4.053 2.338-4.118-1.272-1.862-3.255-2.115-3.957-2.148-1.68-.17-3.284.992-4.148.992-.863 0-2.18-.962-3.568-.934-1.812.026-3.486 1.053-4.423 2.685-1.895 3.286-.484 8.136 1.36 10.803.904 1.306 1.968 2.766 3.376 2.713 1.353-.055 1.868-.876 3.414-.876 1.543 0 2.006.876 3.441.85 1.46-.028 2.378-1.326 3.275-2.637 1.037-1.516 1.463-2.986 1.485-3.063-.03-.014-2.868-1.096-2.893-4.267zM14.545 4.545c.748-.905 1.253-2.164 1.115-3.42-.107.017-.235.035-.373.035-1.353 0-2.85-.826-3.626-1.764-.678-.813-1.282-2.128-1.12-3.42 1.272.103 2.698.882 3.493 1.823.71.841 1.233 2.13 1.056 3.364l-.545.021z" transform="translate(1, 2)"/>
       </svg>
@@ -436,7 +443,7 @@
       </div>
     </a>
     
-    <a href="#" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
+    <a href="javascript:void(0)" data-modal="waitlist" class="download-card card card--light" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem 2rem; text-decoration: none; width: 260px; text-align: left;">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--deep-blue)">
         <path d="M17.523 15.341l2.454 4.249a.663.663 0 0 1-.24.904.664.664 0 0 1-.904-.239l-2.518-4.36A11.39 11.39 0 0 1 12 16.5a11.39 11.39 0 0 1-4.316-.605l-2.518 4.36a.664.664 0 0 1-.903.24.664.664 0 0 1-.241-.905l2.454-4.25A11.523 11.523 0 0 1 2 7.5v-1h20v1a11.523 11.523 0 0 1-4.477 7.841zM8 12.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
       </svg>
@@ -461,13 +468,13 @@
 <div class="container">
   <div class="footer-grid">
     <div class="footer-brand-col">
-      <div class="footer-brand-text" data-i18n="auto.div_211">TimeWitness 时间证明</div>
+      <div class="footer-brand-text" data-i18n="auto.div_211">TimeWitness</div>
       <p class="footer-tagline" data-i18n="auto.p_212">Let Time Witness What Matters.</p>
     </div>
     <div class="footer-col"><h4 data-i18n="auto.h4_213">Product</h4><a href="#how" data-i18n="auto.a_214">How It Works</a><a href="#features" data-i18n="auto.a_215">Features</a><a href="#usecases" data-i18n="auto.a_216">Use Cases</a><a href="#pricing" data-i18n="auto.a_217">Pricing</a></div>
-    <div class="footer-col"><h4 data-i18n="auto.h4_218">Trust</h4><a href="#" data-i18n="auto.a_219">Security Overview</a><a href="#" data-i18n="auto.a_220">Data Export</a><a href="#permanence" data-i18n="auto.a_221">Permanence</a><a href="#" data-i18n="auto.a_222">Privacy Policy</a><a href="#" data-i18n="auto.a_223">Terms of Service</a></div>
-    <div class="footer-col"><h4 data-i18n="auto.h4_224">Company</h4><a href="#" data-i18n="auto.a_225">About</a><a href="mailto:hello@timewitness.app" data-i18n="auto.a_226">Contact</a></div>
-    <div class="footer-col"><h4 data-i18n="auto.h4_227">Connect</h4><a href="#" data-i18n="auto.a_228">WeChat</a><a href="mailto:hello@timewitness.app" data-i18n="auto.a_229">Email</a><a href="#" data-i18n="auto.a_230">X / Twitter</a><a href="#" data-i18n="auto.a_231">Instagram</a></div>
+    <div class="footer-col"><h4 data-i18n="auto.h4_218">Trust</h4><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_219">Security Overview</a><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_220">Data Export</a><a href="#permanence" data-i18n="auto.a_221">Permanence</a><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_222">Privacy Policy</a><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_223">Terms of Service</a></div>
+    <div class="footer-col"><h4 data-i18n="auto.h4_224">Company</h4><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_225">About</a><a href="mailto:hello@timewitness.app" data-i18n="auto.a_226">Contact</a></div>
+    <div class="footer-col"><h4 data-i18n="auto.h4_227">Connect</h4><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_228">WeChat</a><a href="mailto:hello@timewitness.app" data-i18n="auto.a_229">Email</a><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_230">X / Twitter</a><a href="javascript:void(0)" data-modal="coming-soon" data-i18n="auto.a_231">Instagram</a></div>
   </div>
   <div class="footer-bottom">
     <p data-i18n="auto.p_232">© TimeWitness. Built for the memories, promises, and futures that matter.</p>
@@ -475,6 +482,45 @@
   </div>
 </div>
 </footer>
+
+<!-- ═══════════ MODALS ═══════════ -->
+<div class="modal-overlay" id="modal-overlay"></div>
+
+<!-- Waitlist Modal -->
+<div class="modal" id="modal-waitlist" role="dialog" aria-modal="true">
+  <button class="modal-close" aria-label="Close modal">&times;</button>
+  <div class="modal-content card--dark">
+    <div id="waitlist-form-container">
+      <div class="card__icon" style="margin: 0 auto 1.5rem;"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" stroke="currentColor" fill="none" stroke-width="1.5" rx="2"></path><path d="M4 8h16M8 4v16" stroke="currentColor" stroke-width="1.5"></path></svg></div>
+      <h3 class="card__title text-center" data-i18n="modal.waitlist.title">Join the Waitlist</h3>
+      <p class="card__text text-center" data-i18n="modal.waitlist.desc" style="margin-bottom: 2rem;">TimeWitness is currently in early access. Enter your email to receive an invitation when we launch.</p>
+      <form id="waitlist-form" class="waitlist-form">
+        <div class="form-group">
+          <label for="waitlist-email" class="form-label" data-i18n="modal.waitlist.email">Email Address</label>
+          <input type="email" id="waitlist-email" class="form-input" required placeholder="your@email.com">
+        </div>
+        <button type="submit" class="btn btn--primary" style="width: 100%;" data-i18n="modal.waitlist.submit">Join Waitlist</button>
+      </form>
+    </div>
+    <div id="waitlist-success-container" style="display: none; text-align: center;">
+      <div class="card__icon" style="margin: 0 auto 1.5rem; background: var(--success-green, #10B981);"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      <h3 class="card__title" data-i18n="modal.success.title">You're on the list!</h3>
+      <p class="card__text" data-i18n="modal.success.desc">Thank you for your interest. We'll send you an invitation as soon as TimeWitness is ready.</p>
+      <button class="btn btn--secondary modal-close-btn" style="margin-top: 2rem;" data-i18n="modal.success.close">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Coming Soon Modal -->
+<div class="modal" id="modal-coming-soon" role="dialog" aria-modal="true">
+  <button class="modal-close" aria-label="Close modal">&times;</button>
+  <div class="modal-content card--dark text-center">
+    <div class="card__icon" style="margin: 0 auto 1.5rem;"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"></circle><polyline points="12 6 12 12 16 14" stroke="currentColor" fill="none" stroke-width="1.5"></polyline></svg></div>
+    <h3 class="card__title" data-i18n="modal.comingsoon.title">Coming Soon</h3>
+    <p class="card__text" data-i18n="modal.comingsoon.desc">This feature is currently being finalized for our public launch. Check back soon!</p>
+    <button class="btn btn--primary modal-close-btn" style="margin-top: 2rem;" data-i18n="modal.success.close">Close</button>
+  </div>
+</div>
 
 
 
